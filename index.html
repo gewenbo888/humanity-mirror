@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Humanity Mirror — A Unified Model of Civilization, Consciousness & Decision | 人类之镜</title>
+<meta name="description" content="A living model of human civilization: interactive timeline from Big Bang to deep future, consciousness graph, decision simulator, planetary metrics, and strategy engine. Bilingual EN / 中文.">
+<meta name="keywords" content="humanity mirror, civilization model, consciousness graph, decision simulator, futures studies, big history, planetary metrics, 人类之镜, 文明模型, 未来决策">
+<meta name="author" content="Gewenbo">
+<link rel="canonical" href="https://mirror.psyverse.fun/">
+<link rel="alternate" hreflang="en" href="https://mirror.psyverse.fun/">
+<link rel="alternate" hreflang="zh-CN" href="https://mirror.psyverse.fun/">
+<link rel="alternate" hreflang="x-default" href="https://mirror.psyverse.fun/">
+<meta property="og:title" content="Humanity Mirror — Civilization · Consciousness · Decision">
+<meta property="og:description" content="A living model of humanity. Six interactive modules from Big Bang to deep future.">
+<meta property="og:url" content="https://mirror.psyverse.fun/">
+<meta property="og:site_name" content="Psyverse">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Humanity Mirror — A Unified Model of Civilization">
+<meta name="twitter:description" content="Six interactive modules: timeline, consciousness, simulator, metrics, strategy, knowledge.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#06070d">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Humanity Mirror","alternateName":"人类之镜","description":"A unified model of civilization, consciousness, and decision.","url":"https://mirror.psyverse.fun/","inLanguage":["en","zh-CN"],"author":{"@type":"Person","name":"Gewenbo","url":"https://psyverse.fun/"},"publisher":{"@type":"Organization","name":"Psyverse","url":"https://psyverse.fun/"}}
+</script>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23070815'/><circle cx='16' cy='16' r='6' fill='none' stroke='%237b5cff' stroke-width='1.4'/><circle cx='16' cy='16' r='10' fill='none' stroke='%2356e6ff' stroke-width='.7' opacity='.7'/><circle cx='16' cy='10' r='1.4' fill='%23ffd166'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://analytics-dashboard-two-blue.vercel.app/tracker.js" defer></script>
+<style>
+:root{
+  --void:#06070d; --abyss:#0b0d18; --deep:#11142a; --rim:#1c2042;
+  --plasma:#7b5cff; --cyan:#56e6ff; --gold:#ffd166; --rose:#ff6b9d;
+  --line:rgba(123,92,255,.18); --line-strong:rgba(123,92,255,.34);
+  --text:#e7e9f3; --dim:#8b90b3; --faint:#4d5172;
+  --display:'Cormorant Garamond',serif;
+  --sans:'Space Grotesk',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--void); color:var(--text);
+  font-family:var(--sans); line-height:1.65;
+  -webkit-font-smoothing:antialiased; min-height:100vh;
+  overflow-x:hidden;
+}
+body.zh{font-family:'Noto Sans SC',sans-serif;}
+body.zh .display{font-family:'Noto Serif SC',serif;}
+.display{font-family:var(--display); letter-spacing:-.02em; font-weight:500;}
+.mono{font-family:var(--mono);}
+[data-en],[data-zh]{display:inline;}
+body:not(.zh) [data-zh]{display:none;}
+body.zh [data-en]{display:none;}
+a{color:var(--cyan);text-decoration:none;}
+a:hover{color:var(--plasma);}
+
+/* ── COSMIC BG ── */
+.starfield{position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(circle at 20% 15%, rgba(123,92,255,.08) 0%, transparent 50%),
+  radial-gradient(circle at 80% 75%, rgba(86,230,255,.06) 0%, transparent 50%),
+  radial-gradient(circle at 50% 50%, rgba(255,209,102,.03) 0%, transparent 70%),
+  var(--void);}
+canvas#stars{position:fixed;inset:0;z-index:-1;pointer-events:none;}
+
+/* ── HEADER ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(6,7,13,.7);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);}
+.nav-inner{max-width:1320px;margin:0 auto;padding:14px 32px;
+  display:flex;align-items:center;gap:24px;}
+.brand{display:flex;align-items:center;gap:11px;font-weight:600;letter-spacing:-.01em;}
+.brand-mark{width:30px;height:30px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,var(--plasma),var(--abyss) 70%);
+  box-shadow:0 0 20px rgba(123,92,255,.5),inset 0 0 10px rgba(86,230,255,.4);
+  position:relative;}
+.brand-mark::after{content:"";position:absolute;inset:6px;border-radius:50%;
+  border:1px solid var(--cyan);opacity:.6;}
+.brand-text{font-family:var(--display);font-size:1.18rem;font-weight:600;}
+.brand-zh{font-family:'Noto Serif SC',serif;font-size:.95rem;color:var(--dim);}
+.nav-links{display:flex;gap:22px;margin-left:auto;}
+.nav-links a{color:var(--dim);font-size:.84rem;font-weight:500;letter-spacing:.02em;
+  transition:color .15s;font-family:var(--mono);}
+.nav-links a:hover{color:var(--plasma);}
+.nav-controls{display:flex;gap:8px;}
+.lang-btn{padding:6px 14px;border:1px solid var(--line-strong);background:transparent;
+  color:var(--text);border-radius:999px;font-family:var(--mono);font-size:.78rem;
+  cursor:pointer;transition:all .15s;}
+.lang-btn:hover{border-color:var(--plasma);color:var(--plasma);}
+@media(max-width:840px){.nav-links{display:none;}}
+
+/* ── LAYOUT ── */
+section{padding:120px 32px;position:relative;}
+.wrap{max-width:1320px;margin:0 auto;}
+.eyebrow{display:inline-block;font-family:var(--mono);font-size:.74rem;
+  color:var(--cyan);letter-spacing:.22em;text-transform:uppercase;
+  padding:5px 14px;border:1px solid var(--line-strong);border-radius:999px;
+  margin-bottom:24px;}
+h1{font-family:var(--display);font-size:clamp(2.6rem,6.5vw,5.8rem);
+  line-height:1;letter-spacing:-.025em;margin-bottom:24px;font-weight:500;}
+h2{font-family:var(--display);font-size:clamp(2rem,4.5vw,3.8rem);
+  line-height:1.05;letter-spacing:-.02em;margin-bottom:16px;font-weight:500;}
+h3{font-family:var(--display);font-size:1.6rem;font-weight:600;
+  margin-bottom:10px;letter-spacing:-.015em;}
+h4{font-family:var(--sans);font-size:.78rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);
+  margin-bottom:14px;}
+.lede{font-size:1.18rem;color:var(--dim);max-width:760px;line-height:1.7;}
+.section-head{margin-bottom:54px;max-width:840px;}
+
+/* ── HERO ── */
+.hero{padding:170px 32px 100px;text-align:center;}
+.hero h1{margin:0 auto 28px;max-width:1100px;}
+.hero h1 .grad{background:linear-gradient(120deg,var(--plasma) 30%,var(--cyan) 65%,var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero .lede{margin:0 auto 40px;font-size:1.25rem;}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn{padding:14px 28px;border-radius:999px;font-family:var(--mono);font-size:.84rem;
+  font-weight:500;letter-spacing:.04em;cursor:pointer;transition:all .2s;
+  display:inline-flex;align-items:center;gap:8px;border:1px solid transparent;}
+.btn-pri{background:var(--plasma);color:white;}
+.btn-pri:hover{background:transparent;border-color:var(--plasma);color:var(--plasma);box-shadow:0 0 24px rgba(123,92,255,.4);}
+.btn-sec{background:transparent;border-color:var(--line-strong);color:var(--text);}
+.btn-sec:hover{border-color:var(--cyan);color:var(--cyan);}
+
+.module-rail{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;
+  margin-top:90px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:var(--line);}
+@media(max-width:900px){.module-rail{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.module-rail{grid-template-columns:1fr;}}
+.rail-item{padding:24px 18px;background:var(--void);
+  display:flex;flex-direction:column;gap:6px;}
+.rail-item .num{font-family:var(--mono);font-size:.7rem;color:var(--plasma);letter-spacing:.15em;}
+.rail-item .name{font-family:var(--display);font-size:1.05rem;font-weight:600;}
+.rail-item .desc{font-size:.78rem;color:var(--faint);line-height:1.5;}
+
+/* ── MODULE 1 — TIMELINE ── */
+.timeline-stage{margin-top:30px;padding:28px;background:var(--abyss);
+  border:1px solid var(--line);border-radius:14px;}
+.timeline-axis{position:relative;height:80px;margin:24px 0 32px;}
+.tl-line{position:absolute;left:0;right:0;top:50%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--plasma),var(--cyan),var(--gold),transparent);
+  transform:translateY(-50%);}
+.tl-node{position:absolute;top:50%;width:18px;height:18px;border-radius:50%;
+  background:var(--abyss);border:2px solid var(--plasma);
+  transform:translate(-50%,-50%);cursor:pointer;transition:all .2s;}
+.tl-node:hover,.tl-node.active{transform:translate(-50%,-50%) scale(1.4);
+  box-shadow:0 0 16px var(--plasma);background:var(--plasma);}
+.tl-label{position:absolute;top:calc(50% + 18px);left:50%;
+  transform:translateX(-50%);font-family:var(--mono);font-size:.7rem;
+  color:var(--dim);white-space:nowrap;pointer-events:none;}
+.tl-tick{position:absolute;top:0;width:1px;background:var(--line);height:14px;}
+.tl-era-label{position:absolute;top:0;font-family:var(--mono);font-size:.66rem;
+  color:var(--faint);transform:translateX(-50%);}
+.tl-detail{display:grid;grid-template-columns:240px 1fr;gap:32px;
+  background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:24px;}
+@media(max-width:760px){.tl-detail{grid-template-columns:1fr;}}
+.tl-detail .when{font-family:var(--mono);font-size:.78rem;color:var(--cyan);margin-bottom:8px;}
+.tl-detail .title{font-family:var(--display);font-size:1.7rem;font-weight:600;margin-bottom:6px;}
+.tl-detail .epoch{font-size:.82rem;color:var(--dim);font-style:italic;}
+.tl-detail .body p{margin-bottom:14px;color:var(--text);}
+.tl-detail .body strong{color:var(--gold);}
+.tl-detail h5{font-family:var(--sans);font-size:.74rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--plasma);margin:18px 0 8px;font-weight:600;}
+.tl-detail ul{margin-left:16px;color:var(--dim);}
+.tl-detail ul li{margin-bottom:5px;font-size:.94rem;}
+.tl-zoom{display:flex;gap:6px;margin-top:18px;font-family:var(--mono);font-size:.74rem;}
+.tl-zoom button{padding:5px 11px;border:1px solid var(--line-strong);background:transparent;
+  color:var(--dim);border-radius:6px;cursor:pointer;transition:all .15s;}
+.tl-zoom button.active,.tl-zoom button:hover{border-color:var(--plasma);color:var(--plasma);}
+
+/* ── MODULE 2 — CONSCIOUSNESS ── */
+.cs-stage{position:relative;margin-top:30px;background:var(--abyss);
+  border:1px solid var(--line);border-radius:14px;padding:28px;
+  display:grid;grid-template-columns:1.4fr 1fr;gap:28px;}
+@media(max-width:900px){.cs-stage{grid-template-columns:1fr;}}
+.cs-graph{position:relative;height:540px;background:radial-gradient(ellipse at center,var(--deep),var(--abyss));
+  border-radius:10px;overflow:hidden;}
+.cs-graph svg{width:100%;height:100%;display:block;}
+.cs-node{cursor:pointer;}
+.cs-node circle{transition:all .2s;}
+.cs-node:hover circle,.cs-node.active circle{stroke-width:3;}
+.cs-node text{font-family:var(--sans);font-size:11px;font-weight:600;fill:white;pointer-events:none;}
+.cs-edge{stroke:var(--line-strong);stroke-width:1;opacity:.4;transition:all .2s;}
+.cs-edge.glow{stroke:var(--cyan);opacity:.9;stroke-width:1.5;}
+.cs-info{padding:8px 0;}
+.cs-info .layer{font-family:var(--mono);font-size:.74rem;color:var(--gold);letter-spacing:.16em;}
+.cs-info .name{font-family:var(--display);font-size:1.7rem;font-weight:600;margin:6px 0 12px;}
+.cs-info p{color:var(--text);margin-bottom:14px;font-size:.94rem;line-height:1.7;}
+.cs-info .fact-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  margin-top:18px;padding-top:18px;border-top:1px solid var(--line);}
+.cs-fact{padding:12px;background:var(--deep);border:1px solid var(--line);border-radius:8px;}
+.cs-fact .k{font-family:var(--mono);font-size:.66rem;color:var(--faint);
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;}
+.cs-fact .v{font-family:var(--display);font-size:1.1rem;color:var(--cyan);font-weight:600;}
+.cs-info .connections{margin-top:14px;font-size:.82rem;color:var(--dim);}
+.cs-info .connections strong{color:var(--plasma);}
+
+/* ── MODULE 3 — DECISION SIM ── */
+.sim-stage{margin-top:30px;background:var(--abyss);border:1px solid var(--line);
+  border-radius:14px;padding:28px;}
+.sim-input-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:16px;}
+@media(max-width:600px){.sim-input-row{grid-template-columns:1fr;}}
+.sim-input{padding:14px 18px;background:var(--deep);border:1px solid var(--line-strong);
+  border-radius:10px;color:var(--text);font-family:var(--sans);font-size:.96rem;outline:none;}
+.sim-input:focus{border-color:var(--plasma);}
+.sim-presets{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;}
+.sim-chip{padding:6px 12px;background:var(--deep);border:1px solid var(--line);
+  border-radius:999px;font-size:.78rem;color:var(--dim);cursor:pointer;
+  transition:all .15s;font-family:var(--mono);}
+.sim-chip:hover{border-color:var(--cyan);color:var(--cyan);}
+.sim-output{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+@media(max-width:840px){.sim-output{grid-template-columns:1fr;}}
+.sim-path{padding:22px;background:var(--deep);border:1px solid var(--line);
+  border-radius:10px;border-top:3px solid var(--cyan);transition:all .2s;}
+.sim-path:hover{border-color:var(--plasma);transform:translateY(-2px);}
+.sim-path.optimistic{border-top-color:var(--gold);}
+.sim-path.realistic{border-top-color:var(--cyan);}
+.sim-path.dystopic{border-top-color:var(--rose);}
+.sim-path .prob{font-family:var(--mono);font-size:.74rem;color:var(--dim);letter-spacing:.1em;}
+.sim-path .name{font-family:var(--display);font-size:1.35rem;font-weight:600;margin:6px 0 10px;}
+.sim-path p{font-size:.88rem;color:var(--dim);line-height:1.65;margin-bottom:14px;}
+.sim-meta{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.7rem;
+  padding-top:12px;border-top:1px solid var(--line);}
+.sim-meta .k{color:var(--faint);}
+.sim-meta .v{color:var(--text);}
+.sim-bars{margin:12px 0;}
+.sim-bar-row{display:grid;grid-template-columns:80px 1fr 36px;gap:10px;
+  align-items:center;font-size:.74rem;color:var(--dim);margin-bottom:5px;font-family:var(--mono);}
+.sim-bar{height:4px;background:var(--rim);border-radius:2px;overflow:hidden;}
+.sim-bar div{height:100%;border-radius:2px;}
+
+/* ── MODULE 4 — METRICS ── */
+.met-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px;}
+@media(max-width:1000px){.met-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.met-grid{grid-template-columns:1fr;}}
+.met-card{padding:24px;background:var(--abyss);border:1px solid var(--line);
+  border-radius:12px;position:relative;overflow:hidden;}
+.met-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--plasma),var(--cyan));}
+.met-card .label{font-family:var(--mono);font-size:.7rem;color:var(--dim);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
+.met-card .value{font-family:var(--display);font-size:2.4rem;font-weight:600;
+  color:var(--cyan);line-height:1;letter-spacing:-.02em;}
+.met-card .unit{font-family:var(--mono);font-size:.72rem;color:var(--dim);margin-left:6px;}
+.met-card .delta{font-family:var(--mono);font-size:.74rem;margin-top:8px;}
+.met-card .delta.up{color:var(--gold);} .met-card .delta.dn{color:var(--rose);}
+.met-card .spark{margin-top:14px;height:34px;}
+.met-card .spark svg{width:100%;height:100%;}
+.met-trend{margin-top:36px;background:var(--abyss);border:1px solid var(--line);
+  border-radius:14px;padding:28px;}
+.met-trend h3{margin-bottom:14px;}
+.met-trend-tabs{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap;}
+.met-tab{padding:6px 12px;border:1px solid var(--line);background:transparent;
+  border-radius:6px;color:var(--dim);font-family:var(--mono);font-size:.74rem;cursor:pointer;}
+.met-tab.active,.met-tab:hover{border-color:var(--plasma);color:var(--plasma);}
+.met-chart{height:280px;background:var(--deep);border-radius:8px;padding:16px;position:relative;}
+.met-chart svg{width:100%;height:100%;}
+
+/* ── MODULE 5 — STRATEGY ── */
+.str-stage{margin-top:30px;display:grid;grid-template-columns:300px 1fr;gap:24px;}
+@media(max-width:900px){.str-stage{grid-template-columns:1fr;}}
+.str-list{background:var(--abyss);border:1px solid var(--line);border-radius:14px;padding:18px;
+  display:flex;flex-direction:column;gap:6px;}
+.str-item{padding:12px 14px;border:1px solid var(--line);border-radius:8px;
+  cursor:pointer;transition:all .2s;background:var(--deep);}
+.str-item:hover{border-color:var(--cyan);}
+.str-item.active{border-color:var(--plasma);background:rgba(123,92,255,.06);}
+.str-item .name{font-family:var(--display);font-size:1.04rem;font-weight:600;margin-bottom:3px;}
+.str-item .tag{font-family:var(--mono);font-size:.66rem;color:var(--dim);letter-spacing:.1em;}
+.str-detail{background:var(--abyss);border:1px solid var(--line);border-radius:14px;padding:30px;}
+.str-detail .name{font-family:var(--display);font-size:2.2rem;font-weight:600;margin-bottom:8px;}
+.str-detail .summary{color:var(--dim);font-size:1rem;margin-bottom:24px;line-height:1.7;}
+.str-axes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px;}
+@media(max-width:540px){.str-axes{grid-template-columns:1fr;}}
+.str-axis{padding:14px;background:var(--deep);border:1px solid var(--line);border-radius:8px;}
+.str-axis .k{font-family:var(--mono);font-size:.7rem;color:var(--dim);
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.str-axis .meter{height:8px;background:var(--rim);border-radius:4px;overflow:hidden;margin-bottom:8px;}
+.str-axis .meter div{height:100%;border-radius:4px;}
+.str-axis .scale{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.66rem;color:var(--faint);}
+.str-tradeoffs{margin-bottom:18px;}
+.str-tradeoffs h5{font-family:var(--sans);font-size:.74rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:10px;font-weight:600;}
+.str-tradeoffs ul{margin-left:18px;color:var(--text);}
+.str-tradeoffs ul li{margin-bottom:6px;font-size:.92rem;}
+.str-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:540px){.str-row{grid-template-columns:1fr;}}
+
+/* ── MODULE 6 — KNOWLEDGE LAYER ── */
+.kl-stage{margin-top:30px;background:var(--abyss);border:1px solid var(--line);
+  border-radius:14px;padding:30px;}
+.kl-tabs{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap;}
+.kl-tab{padding:8px 18px;border:1px solid var(--line);background:transparent;
+  border-radius:999px;color:var(--dim);font-family:var(--mono);font-size:.78rem;cursor:pointer;}
+.kl-tab.active,.kl-tab:hover{border-color:var(--plasma);color:var(--plasma);background:rgba(123,92,255,.06);}
+.kl-topic-row{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap;}
+.kl-topic{padding:5px 12px;border:1px solid var(--line);background:transparent;
+  border-radius:6px;color:var(--dim);font-family:var(--mono);font-size:.74rem;cursor:pointer;}
+.kl-topic.active,.kl-topic:hover{border-color:var(--cyan);color:var(--cyan);}
+.kl-card{background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:30px;}
+.kl-card .topic{font-family:var(--mono);font-size:.74rem;color:var(--gold);letter-spacing:.14em;}
+.kl-card h3{font-family:var(--display);font-size:2rem;margin:8px 0 16px;font-weight:600;}
+.kl-card .body{font-size:1.02rem;color:var(--text);line-height:1.85;}
+.kl-card .body p{margin-bottom:14px;}
+.kl-card .body strong{color:var(--cyan);font-weight:600;}
+.kl-card .body em{color:var(--gold);font-style:italic;}
+
+/* ── MANIFESTO STRIPS ── */
+.strip{padding:80px 32px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,var(--abyss),var(--void));}
+.strip-quote{font-family:var(--display);font-size:clamp(1.8rem,3.6vw,2.8rem);
+  font-style:italic;text-align:center;max-width:980px;margin:0 auto;
+  font-weight:500;line-height:1.3;letter-spacing:-.015em;}
+.strip-quote .accent{color:var(--gold);}
+.strip-attr{text-align:center;font-family:var(--mono);font-size:.74rem;
+  color:var(--dim);margin-top:24px;letter-spacing:.16em;text-transform:uppercase;}
+
+/* ── FOOTER ── */
+footer{padding:80px 32px 40px;border-top:1px solid var(--line);background:var(--abyss);}
+.foot-grid{max-width:1320px;margin:0 auto;
+  display:grid;grid-template-columns:2fr repeat(3,1fr);gap:36px;}
+@media(max-width:740px){.foot-grid{grid-template-columns:1fr 1fr;}}
+.foot-col h5{font-family:var(--mono);font-size:.7rem;color:var(--dim);
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;}
+.foot-col a{display:block;padding:5px 0;color:var(--dim);font-size:.88rem;transition:color .15s;}
+.foot-col a:hover{color:var(--plasma);}
+.foot-bot{max-width:1320px;margin:36px auto 0;padding-top:24px;
+  border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  font-family:var(--mono);font-size:.74rem;color:var(--faint);}
+
+/* ── UTILITIES ── */
+.fadeup{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s;}
+.fadeup.in{opacity:1;transform:translateY(0);}
+@keyframes pulse{0%,100%{opacity:.4;}50%{opacity:1;}}
+.pulse{animation:pulse 2s ease-in-out infinite;}
+.toast{position:fixed;bottom:32px;left:50%;transform:translate(-50%,80px);
+  background:var(--text);color:var(--void);padding:12px 22px;border-radius:8px;
+  font-size:.86rem;font-weight:500;opacity:0;transition:all .25s;z-index:200;}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+*::-webkit-scrollbar{width:8px;height:8px;}
+*::-webkit-scrollbar-track{background:var(--void);}
+*::-webkit-scrollbar-thumb{background:var(--rim);border-radius:4px;}
+</style>
+</head>
+<body>
+
+<div class="starfield"></div>
+<canvas id="stars"></canvas>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-text" data-en="Humanity Mirror" data-zh="人类之镜"></div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#timeline" data-en="Timeline" data-zh="时间线"></a>
+      <a href="#consciousness" data-en="Consciousness" data-zh="意识"></a>
+      <a href="#simulator" data-en="Simulator" data-zh="模拟器"></a>
+      <a href="#metrics" data-en="Metrics" data-zh="指标"></a>
+      <a href="#strategy" data-en="Strategy" data-zh="策略"></a>
+      <a href="#knowledge" data-en="Knowledge" data-zh="知识"></a>
+    </div>
+    <div class="nav-controls">
+      <button class="lang-btn" id="lang-btn">中文</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span data-en="A LIVING MODEL OF HUMANITY" data-zh="一座关于人类的活体模型"></span>
+    </div>
+    <h1>
+      <span data-en="A mirror in which our <span class='grad'>civilization</span><br>can see itself thinking." data-zh="一面镜子，让我们的<span class='grad'>文明</span><br>看见自己正在思考。"></span>
+    </h1>
+    <p class="lede">
+      <span data-en="Six interconnected modules — a deep-time timeline, a consciousness graph, a decision simulator, a planetary dashboard, a strategy engine, and a layered knowledge compressor — assembled into one cognitive infrastructure for the species that built them." data-zh="六个相互连接的模块 —— 深时间线、意识图谱、决策模拟器、行星仪表盘、策略引擎、分层知识压缩器 —— 合成为一个认知基础设施，献给那个创造了它的物种。"></span>
+    </p>
+    <div class="hero-cta">
+      <a href="#timeline" class="btn btn-pri"><span data-en="Begin at Big Bang" data-zh="从大爆炸开始"></span> →</a>
+      <a href="#simulator" class="btn btn-sec"><span data-en="Run a simulation" data-zh="运行模拟"></span></a>
+    </div>
+
+    <div class="module-rail">
+      <div class="rail-item"><span class="num">01 ·</span><div class="name" data-en="Timeline" data-zh="时间线"></div><div class="desc" data-en="13.8 Gyr → 100 kyr ahead" data-zh="138 亿年 → 未来 10 万年"></div></div>
+      <div class="rail-item"><span class="num">02 ·</span><div class="name" data-en="Consciousness" data-zh="意识"></div><div class="desc" data-en="4 layers · 12 nodes" data-zh="4 层 · 12 节点"></div></div>
+      <div class="rail-item"><span class="num">03 ·</span><div class="name" data-en="Simulator" data-zh="模拟器"></div><div class="desc" data-en="Branching futures" data-zh="分支未来"></div></div>
+      <div class="rail-item"><span class="num">04 ·</span><div class="name" data-en="Metrics" data-zh="指标"></div><div class="desc" data-en="Planetary signals" data-zh="行星信号"></div></div>
+      <div class="rail-item"><span class="num">05 ·</span><div class="name" data-en="Strategy" data-zh="策略"></div><div class="desc" data-en="Civilizational levers" data-zh="文明杠杆"></div></div>
+      <div class="rail-item"><span class="num">06 ·</span><div class="name" data-en="Knowledge" data-zh="知识"></div><div class="desc" data-en="3 depths of view" data-zh="3 层视角"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO STRIP -->
+<section class="strip">
+  <div class="wrap">
+    <p class="strip-quote">
+      <span data-en="Civilization is the species' attempt to <span class='accent'>see</span> itself <span class='accent'>across</span> time." data-zh="文明，是这个物种试图<span class='accent'>跨越</span>时间<span class='accent'>看见</span>自己的努力。"></span>
+    </p>
+    <p class="strip-attr" data-en="— Mirror Manifesto · Section I" data-zh="— 镜之宣言 · 第一节"></p>
+  </div>
+</section>
+
+<!-- MODULE 1 — TIMELINE -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="section-head">
+      <h4>Module 01 · <span data-en="Civilization Timeline Engine" data-zh="文明时间线引擎"></span></h4>
+      <h2><span data-en="From the first photon to the last star." data-zh="从第一束光，到最后一颗星。"></span></h2>
+      <p class="lede"><span data-en="A scrubbable arc of cosmic and civilizational time. Each node opens into a structured account: scientific basis, key events, and the standing impact on humanity. Zoom across nine deep-time layers." data-zh="一条可滑动的宇宙与文明时间弧线。每个节点展开为结构化叙述：科学基础、关键事件、对人类的持续影响。跨越九个深时间层级缩放。"></span></p>
+    </div>
+
+    <div class="timeline-stage">
+      <div class="tl-zoom" id="tl-zoom"></div>
+      <div class="timeline-axis" id="tl-axis"></div>
+      <div class="tl-detail" id="tl-detail"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 2 — CONSCIOUSNESS -->
+<section id="consciousness" style="background:linear-gradient(180deg,var(--void),var(--abyss),var(--void));">
+  <div class="wrap">
+    <div class="section-head">
+      <h4>Module 02 · <span data-en="Human Consciousness Model" data-zh="人类意识模型"></span></h4>
+      <h2><span data-en="The architecture beneath every thought." data-zh="每一个念头之下的建筑。"></span></h2>
+      <p class="lede"><span data-en="Consciousness is not a thing — it's a stack. Twelve nodes across four layers (biology, cognition, society, meta) connected by the pathways through which a thought becomes a civilization. Click any node to enter it." data-zh="意识不是一件事物，而是一个层叠系统。十二个节点分布于四层（生物、认知、社会、元层级），通过让一个念头成长为一种文明的路径相连。点击任意节点进入。"></span></p>
+    </div>
+
+    <div class="cs-stage">
+      <div class="cs-graph">
+        <svg id="cs-svg" viewBox="0 0 600 540" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+      <div class="cs-info" id="cs-info"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 3 — SIMULATOR -->
+<section id="simulator">
+  <div class="wrap">
+    <div class="section-head">
+      <h4>Module 03 · <span data-en="Global Decision Simulator" data-zh="全球决策模拟器"></span></h4>
+      <h2><span data-en="Three futures, branching from this moment." data-zh="三个未来，从此刻分叉。"></span></h2>
+      <p class="lede"><span data-en="Type a civilizational scenario. The engine forks reality into three plausible paths — optimistic, realistic, and dystopic — each with assigned probability, key drivers, and the ethical tradeoffs you would have to accept." data-zh="输入一个文明级情境。引擎将现实分叉为三条合理路径 —— 乐观、现实、反乌托邦 —— 各自附带概率、关键驱动力，以及你必须承受的伦理代价。"></span></p>
+    </div>
+
+    <div class="sim-stage">
+      <div class="sim-input-row">
+        <input type="text" id="sim-input" class="sim-input" placeholder="What happens if humanity..." data-en-placeholder="What happens if humanity..." data-zh-placeholder="如果人类...">
+        <button class="btn btn-pri" id="sim-run"><span data-en="Simulate" data-zh="模拟"></span> →</button>
+      </div>
+      <div class="sim-presets" id="sim-presets"></div>
+      <div class="sim-output" id="sim-output"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO STRIP -->
+<section class="strip">
+  <div class="wrap">
+    <p class="strip-quote">
+      <span data-en="A future is not predicted. It is <span class='accent'>chosen</span>, then <span class='accent'>survived</span>." data-zh="未来不是被预测出来的，它是被<span class='accent'>选择</span>，再被<span class='accent'>幸存</span>下来的。"></span>
+    </p>
+    <p class="strip-attr" data-en="— Mirror Manifesto · Section IV" data-zh="— 镜之宣言 · 第四节"></p>
+  </div>
+</section>
+
+<!-- MODULE 4 — METRICS -->
+<section id="metrics">
+  <div class="wrap">
+    <div class="section-head">
+      <h4>Module 04 · <span data-en="Humanity Metrics Dashboard" data-zh="人类指标仪表盘"></span></h4>
+      <h2><span data-en="The vital signs of a planetary species." data-zh="一个行星物种的生命体征。"></span></h2>
+      <p class="lede"><span data-en="Twelve indicators that, taken together, describe the state of humanity at the planetary scale: demographic mass, energy throughput, distributional fairness, technological capability, ecological pressure, cognitive infrastructure." data-zh="十二项指标，合起来描述人类在行星尺度上的状态：人口规模、能量通量、分配公平、技术能力、生态压力、认知基础设施。"></span></p>
+    </div>
+
+    <div class="met-grid" id="met-grid"></div>
+
+    <div class="met-trend">
+      <h3 class="display"><span data-en="The long arc" data-zh="长时段曲线"></span></h3>
+      <div class="met-trend-tabs" id="met-tabs"></div>
+      <div class="met-chart"><svg id="met-svg" viewBox="0 0 800 280" preserveAspectRatio="none"></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 5 — STRATEGY -->
+<section id="strategy" style="background:linear-gradient(180deg,var(--void),var(--abyss),var(--void));">
+  <div class="wrap">
+    <div class="section-head">
+      <h4>Module 05 · <span data-en="Civilization Strategy Engine" data-zh="文明策略引擎"></span></h4>
+      <h2><span data-en="Levers we have. Costs we owe." data-zh="我们手中的杠杆，与它们的代价。"></span></h2>
+      <p class="lede"><span data-en="Twelve civilizational proposals — from Global UBI to Mars Colonization to Banning AI — each scored on four axes: short-term impact, long-term stability, ethical weight, and fragility risk. With the actual tradeoffs you would inherit." data-zh="十二项文明级提案 —— 从全球基本收入到火星殖民再到禁止 AI —— 每项在四个维度上评估：短期冲击、长期稳定性、伦理重量、脆弱性风险。附带你将继承的真实代价。"></span></p>
+    </div>
+
+    <div class="str-stage">
+      <div class="str-list" id="str-list"></div>
+      <div class="str-detail" id="str-detail"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULE 6 — KNOWLEDGE -->
+<section id="knowledge">
+  <div class="wrap">
+    <div class="section-head">
+      <h4>Module 06 · <span data-en="Knowledge Compression Layer" data-zh="知识压缩层"></span></h4>
+      <h2><span data-en="The same truth, told three ways." data-zh="同一种真理，以三种方式讲述。"></span></h2>
+      <p class="lede"><span data-en="Every concept compresses differently for different minds. Choose your depth — Beginner (story), Expert (mechanism), Philosopher (consequence) — then pick a topic. Watch the same idea reform itself." data-zh="每一个概念，对不同的头脑会以不同方式压缩。选择你的深度 —— 入门（故事）、专家（机制）、哲学（后果） —— 再选一个主题。看着同一个想法重塑自身。"></span></p>
+    </div>
+
+    <div class="kl-stage">
+      <div class="kl-tabs" id="kl-tabs"></div>
+      <div class="kl-topic-row" id="kl-topics"></div>
+      <div class="kl-card" id="kl-card"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING MANIFESTO STRIP -->
+<section class="strip">
+  <div class="wrap">
+    <p class="strip-quote">
+      <span data-en="If a species can <span class='accent'>build</span> a mirror,<br>it must <span class='accent'>survive</span> looking into it." data-zh="如果一个物种能<span class='accent'>造出</span>一面镜子，<br>它就必须<span class='accent'>幸存</span>于凝视它的那一刻。"></span>
+    </p>
+    <p class="strip-attr" data-en="— Mirror Manifesto · Coda" data-zh="— 镜之宣言 · 尾声"></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-col">
+      <div class="brand" style="margin-bottom:18px;">
+        <div class="brand-mark"></div>
+        <div>
+          <div class="brand-text" data-en="Humanity Mirror" data-zh="人类之镜"></div>
+        </div>
+      </div>
+      <p style="color:var(--dim);font-size:.92rem;max-width:300px;line-height:1.7;" data-en="A cognitive infrastructure for the species that built it. Part of the Psyverse portfolio — a constellation of bilingual instruments for thinking at planetary scale." data-zh="献给造出它的物种的认知基础设施。Psyverse 矩阵的一员 —— 一组面向行星尺度思考的双语工具。"></p>
+    </div>
+    <div class="foot-col">
+      <h5 data-en="Modules" data-zh="模块"></h5>
+      <a href="#timeline" data-en="Timeline" data-zh="时间线"></a>
+      <a href="#consciousness" data-en="Consciousness" data-zh="意识"></a>
+      <a href="#simulator" data-en="Simulator" data-zh="模拟器"></a>
+      <a href="#metrics" data-en="Metrics" data-zh="指标"></a>
+      <a href="#strategy" data-en="Strategy" data-zh="策略"></a>
+      <a href="#knowledge" data-en="Knowledge" data-zh="知识"></a>
+    </div>
+    <div class="foot-col">
+      <h5 data-en="Sister Sites" data-zh="姊妹站点"></h5>
+      <a href="https://omega.psyverse.fun">Ω OMEGA</a>
+      <a href="https://urcde.psyverse.fun">URCDE</a>
+      <a href="https://mindatlas.psyverse.fun" data-en="Atlas of Mind" data-zh="思维之图"></a>
+      <a href="https://minds.psyverse.fun" data-en="Thinking Styles" data-zh="思维方式"></a>
+      <a href="https://seeker.psyverse.fun" data-en="The Seeker" data-zh="求索者"></a>
+    </div>
+    <div class="foot-col">
+      <h5 data-en="Network" data-zh="网络"></h5>
+      <a href="https://psyverse.fun">Psyverse</a>
+      <a href="https://github.com/gewenbo888/humanity-mirror">GitHub</a>
+      <a href="mailto:gewenbo84@gmail.com">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 Psyverse · Humanity Mirror</span>
+    <span data-en="Built by Gewenbo · v1.0" data-zh="Gewenbo 制作 · v1.0"></span>
+  </div>
+</footer>
+
+<script>
+/* ════════════════════════ DATA ════════════════════════ */
+const TIMELINE = [
+  { id:'bigbang', when:'13.8 Gya', whenZh:'138 亿年前', era:'cosmic', title:{en:'The Big Bang', zh:'宇宙大爆炸'},
+    epoch:{en:'Before there was time, there was a beginning.', zh:'在时间之前，已有起点。'},
+    body:{en:'The observable universe expands from an inconceivably hot, dense state. The four fundamental forces split. Within a fraction of a second, the structure of physical law is set — and everything that will ever exist must obey it.', zh:'可观测宇宙从难以想象的高温致密状态膨胀而出。四种基本力分离。在不到一秒的时间里，物理定律的结构被定下 —— 此后存在的一切都必须遵从它。'},
+    events:{en:['Inflation: a single second contains the whole future blueprint','First nuclei (H, He) form within 20 minutes','Universe is opaque plasma for 380,000 years'], zh:['暴涨：一秒之内，未来的整张蓝图被锁定','前 20 分钟内形成最早的原子核（氢、氦）','宇宙以不透明等离子态存在了 38 万年']},
+    impact:{en:'Sets the four forces, the matter/antimatter asymmetry, and the cosmic clock.', zh:'确定了四种基本力、物质/反物质不对称性，以及宇宙之钟。'} },
+  { id:'stars', when:'13.4 Gya', whenZh:'134 亿年前', era:'cosmic', title:{en:'First Stars', zh:'第一代恒星'},
+    epoch:{en:'The first time the universe was lit from within.', zh:'宇宙第一次从内部被点亮。'},
+    body:{en:'Pop III stars ignite in the dark ages. They fuse hydrogen into the heavier elements that will, billions of years later, build planets and bodies. Stars are the first kitchens.', zh:'第三星族恒星在黑暗时代点燃。它们将氢聚变为更重的元素，亿万年后将构成行星与生命之躯。恒星是宇宙最初的厨房。'},
+    events:{en:['First nucleosynthesis beyond H/He','Galaxies begin to assemble','Reionization — light frees the universe'], zh:['超越氢氦的第一次核合成','星系开始组装','再电离 —— 光线释放宇宙']},
+    impact:{en:'Without stars, no carbon. Without carbon, no us.', zh:'没有恒星就没有碳。没有碳就没有我们。'} },
+  { id:'earth', when:'4.54 Gya', whenZh:'45.4 亿年前', era:'planet', title:{en:'Earth Forms', zh:'地球诞生'},
+    epoch:{en:'A particular rock cools and waits.', zh:'一颗特定的岩石冷却下来，开始等待。'},
+    body:{en:'Earth accretes from the protoplanetary disk. The Moon-forming impact tilts the axis and gives us seasons. Within a few hundred million years, oceans condense and the stage is set.', zh:'地球在原行星盘中聚集成形。形成月球的撞击事件让地轴倾斜，赋予我们四季。几亿年内，海洋凝结，舞台搭好。'},
+    events:{en:['Theia impact creates the Moon (~4.5 Gya)','Late heavy bombardment delivers water','First continents (Hadean Eon)'], zh:['忒伊亚撞击形成月球（约 45 亿年前）','晚期重轰击带来水','第一批大陆形成（冥古宙）']},
+    impact:{en:'A chemically rich, hydrated, sun-warmed planet — the only address we know.', zh:'一个化学丰富、含水、被阳光温暖的行星 —— 我们已知的唯一地址。'} },
+  { id:'life', when:'3.7 Gya', whenZh:'37 亿年前', era:'life', title:{en:'Life Begins', zh:'生命起源'},
+    epoch:{en:'Chemistry refused to forget itself.', zh:'化学拒绝再次遗忘自己。'},
+    body:{en:'Self-replicating molecules — likely RNA — emerge in deep-sea hydrothermal vents or shallow tidal pools. The first cells are likely chemoautotrophic. Life will not stop replicating for the next 3.7 billion years.', zh:'自复制分子（可能是 RNA）在深海热液喷口或浅潮池中出现。第一批细胞可能是化能自养型。生命此后 37 亿年从未停止复制。'},
+    events:{en:['LUCA — Last Universal Common Ancestor','Photosynthesis evolves (~3.4 Gya)','Great Oxygenation Event (~2.4 Gya) reshapes atmosphere'], zh:['LUCA —— 最近共同祖先','光合作用演化（约 34 亿年前）','大氧化事件（约 24 亿年前）重塑大气']},
+    impact:{en:'Information becomes biological. Heredity replaces chance.', zh:'信息变得生物化。遗传取代偶然。'} },
+  { id:'sapiens', when:'300 kya', whenZh:'30 万年前', era:'human', title:{en:'Sapiens Appear', zh:'智人出现'},
+    epoch:{en:'A primate begins to ask why.', zh:'一种灵长类开始问为什么。'},
+    body:{en:'Homo sapiens emerges in Africa. Brain volume reaches modern range. Symbolic thought, language, and cooperative violence become tools. By 70 kya the species spreads across continents and replaces every cousin.', zh:'智人在非洲出现。脑容量达到现代水平。象征思维、语言、协同暴力成为工具。约 7 万年前，物种扩散至各大洲，取代了所有近亲。'},
+    events:{en:['Behavioral modernity (~70 kya)','Out-of-Africa migrations','Extinction of Neanderthals, Denisovans (~40 kya)'], zh:['行为现代性（约 7 万年前）','走出非洲的迁徙','尼安德特人、丹尼索瓦人灭绝（约 4 万年前）']},
+    impact:{en:'A planet acquires a species that can imagine planets.', zh:'一颗行星获得了一个能想象行星的物种。'} },
+  { id:'agri', when:'12 kya', whenZh:'1.2 万年前', era:'civ', title:{en:'Agriculture', zh:'农业革命'},
+    epoch:{en:'We started growing the future on purpose.', zh:'我们开始有意识地种植未来。'},
+    body:{en:'Domestication of wheat, rice, maize. Sedentism. Surplus calories enable specialization, bureaucracy, religion, mathematics. The first cities. Within 8,000 years: writing, money, states. The Holocene becomes the human age.', zh:'小麦、水稻、玉米被驯化。定居生活。卡路里盈余支撑专业化、官僚制、宗教、数学。第一批城市。八千年内：文字、货币、国家。全新世成为人类的纪元。'},
+    events:{en:['Neolithic Revolution (~10 kya)','Cuneiform writing (~3200 BCE)','Pyramid era — large-scale coordination'], zh:['新石器革命（约 1 万年前）','楔形文字（约公元前 3200 年）','金字塔时代 —— 大规模协调']},
+    impact:{en:'Population × 1000 in 10,000 years. Inequality is invented.', zh:'1 万年内人口增长 1000 倍。不平等被发明。'} },
+  { id:'industrial', when:'~1750', whenZh:'约 1750', era:'civ', title:{en:'Industrial Revolution', zh:'工业革命'},
+    epoch:{en:'Energy stopped being scarce.', zh:'能量不再稀缺。'},
+    body:{en:'Steam engines convert fossil sunlight (coal) into mechanical work. Energy per capita explodes. Population, lifespan, literacy all rise. So does atmospheric CO₂. The species enters a new metabolic regime.', zh:'蒸汽机将化石阳光（煤）转化为机械功。人均能耗暴增。人口、寿命、识字率同步上升。大气 CO₂ 也是。物种进入新的代谢机制。'},
+    events:{en:['1769 Watt steam engine','1859 oil discovered (PA)','1885 Karl Benz petrol engine'], zh:['1769 瓦特蒸汽机','1859 石油发现（宾州）','1885 卡尔·本茨汽油发动机']},
+    impact:{en:'Modernity becomes possible — and so does climate emergency.', zh:'现代性成为可能 —— 气候紧急状态也是。'} },
+  { id:'digital', when:'1947–', whenZh:'1947–', era:'mod', title:{en:'Digital Era', zh:'数字时代'},
+    epoch:{en:'Information becomes infrastructure.', zh:'信息成为基础设施。'},
+    body:{en:'Transistor invented (Bell Labs, 1947). Internet protocol (1983). World Wide Web (1991). Smartphone (2007). LLMs (2020s). Within 80 years humans build a planetary nervous system and connect 5+ billion minds.', zh:'晶体管发明（贝尔实验室，1947）。互联网协议（1983）。万维网（1991）。智能手机（2007）。大语言模型（2020 年代）。八十年内人类建成一套行星神经系统，连接 50 亿以上的心智。'},
+    events:{en:['First general-purpose computer (ENIAC, 1945)','ARPANET / Internet (1969–83)','Web → Mobile → AI (1991–2025)'], zh:['第一台通用计算机（ENIAC, 1945）','ARPANET / 互联网（1969–83）','万维网 → 移动 → AI（1991–2025）']},
+    impact:{en:'Cognition becomes infrastructure. The species starts thinking together.', zh:'认知成为基础设施。物种开始集体思考。'} },
+  { id:'now', when:'2026', whenZh:'2026', era:'now', title:{en:'The Hinge', zh:'转折之年'},
+    epoch:{en:'Where you are reading this.', zh:'你正在阅读这一行的时刻。'},
+    body:{en:'Climate destabilization, AI takeoff, demographic transition, and biotech maturity all converge in a single decade. The species faces decisions whose consequences propagate for centuries — possibly forever.', zh:'气候失稳、AI 起飞、人口转折、生物技术成熟，全部在同一个十年内汇合。物种面临的抉择将影响延续数百年 —— 可能永远。'},
+    events:{en:['Climate trajectory locked in','AGI threshold approached','Multiplanetary infrastructure begins'], zh:['气候轨迹被锁定','AGI 阈值被逼近','多行星基础设施开始铺设']},
+    impact:{en:'Every decision made now is multiplied by everything that comes next.', zh:'此刻做出的每一个决定，都会被之后的一切放大。'} },
+  { id:'future', when:'+10 kyr', whenZh:'未来 1 万年', era:'future', title:{en:'Deep Future', zh:'深远未来'},
+    epoch:{en:'The window in which our choices echo.', zh:'我们的选择回响的时间窗口。'},
+    body:{en:'If we survive the bottleneck: solar-system scale civilization, brain-computer co-evolution, mind diversity beyond biology. If we do not: a fossil-bearing layer of plastic. Both futures are still latent in this morning.', zh:'若我们度过瓶颈：太阳系规模的文明、人机共演化、超越生物学的心智多样性。若没有度过：一层带塑料化石的地层。两种未来都还潜伏于今早之中。'},
+    events:{en:['Type I civilization (~+1 kyr possible)','Generation ships','Possible signal contact'], zh:['卡尔达肖夫一型文明（约 1000 年内有可能）','世代飞船','可能的信号接触']},
+    impact:{en:'The deep future is not somewhere we go. It is something we leave.', zh:'深远未来不是我们要去的地方，而是我们留下的东西。'} },
+];
+
+const CONSCIOUSNESS = [
+  { id:'dna', layer:'biology', name:{en:'DNA', zh:'DNA'}, x:90, y:80, color:'#56e6ff',
+    desc:{en:'A 4-letter code, 3 billion characters long, copied 37 trillion times into every cell of your body. The biological substrate of identity, evolved across 3.7 billion years.', zh:'一种四字母编码，30 亿字符长，被复制了 37 万亿次写入你身体每一个细胞。身份的生物基底，演化跨度达 37 亿年。'},
+    stats:[{k:'Bases',kZh:'碱基',v:'3.2B'},{k:'Genes',kZh:'基因',v:'~20,000'}],
+    edges:['brain','memory'] },
+  { id:'brain', layer:'biology', name:{en:'Brain', zh:'大脑'}, x:200, y:100, color:'#56e6ff',
+    desc:{en:'86 billion neurons, 100 trillion synapses, 20 watts of continuous compute. The most complex object in the known universe — and you have one inside your skull right now.', zh:'860 亿神经元，100 万亿突触，20 瓦持续算力。已知宇宙中最复杂的物体 —— 此刻就装在你的颅骨里。'},
+    stats:[{k:'Neurons',kZh:'神经元',v:'86B'},{k:'Synapses',kZh:'突触',v:'100T'}],
+    edges:['dna','memory','language','attention'] },
+  { id:'sense', layer:'biology', name:{en:'Senses', zh:'感官'}, x:90, y:200, color:'#56e6ff',
+    desc:{en:'The narrow bandwidth through which reality enters: ~10 million bits per second of raw input, compressed by attention to ~50 bits of conscious awareness.', zh:'现实进入意识的狭窄带宽：每秒约 1000 万比特原始输入，被注意力压缩为约 50 比特的清醒觉察。'},
+    stats:[{k:'Input',kZh:'输入',v:'10 Mbps'},{k:'Conscious',kZh:'意识',v:'50 bps'}],
+    edges:['brain','attention'] },
+
+  { id:'memory', layer:'cognition', name:{en:'Memory', zh:'记忆'}, x:300, y:160, color:'#7b5cff',
+    desc:{en:'The substrate that lets a 70-year human life feel singular. Episodic, semantic, procedural — three storage systems built from the same neurons, retrieved every second of waking life.', zh:'让 70 年人生感觉为单一的衬底。情景、语义、程序 —— 三种由相同神经元构建的存储系统，醒着的每一秒都在调用。'},
+    stats:[{k:'Capacity',kZh:'容量',v:'~2.5 PB'},{k:'Forget rate',kZh:'遗忘率',v:'80%/24h'}],
+    edges:['brain','language','identity'] },
+  { id:'language', layer:'cognition', name:{en:'Language', zh:'语言'}, x:200, y:240, color:'#7b5cff',
+    desc:{en:'The technology that allows two minds to share a single thought. 7,000+ active languages, all sharing recursive grammar — possibly the genetic feature that made sapiens dominant.', zh:'让两个心智共享一个念头的技术。7000 多种活语言，皆有递归语法 —— 可能正是让智人主宰世界的那一项基因特征。'},
+    stats:[{k:'Languages',kZh:'语言数',v:'~7,000'},{k:'Avg vocab',kZh:'平均词汇',v:'~20k'}],
+    edges:['brain','memory','culture','identity'] },
+  { id:'attention', layer:'cognition', name:{en:'Attention', zh:'注意力'}, x:380, y:90, color:'#7b5cff',
+    desc:{en:'The act of selecting what becomes real for a mind. The bottleneck through which every conscious experience must pass — and the most contested resource in the modern economy.', zh:'选择什么变得"真实"的行为。每一个意识体验必经之瓶颈 —— 也是现代经济中最被争夺的资源。'},
+    stats:[{k:'Span',kZh:'跨度',v:'8–12 sec'},{k:'Switches/day',kZh:'切换次数',v:'~2,500'}],
+    edges:['brain','sense','culture'] },
+
+  { id:'identity', layer:'society', name:{en:'Identity', zh:'身份'}, x:300, y:330, color:'#ffd166',
+    desc:{en:'The story a brain tells about itself, mostly retroactive. Layered: body, name, role, nation, species. All identities are coalitions across time.', zh:'大脑讲给自己听的故事，多数是事后建构。分层：身体、姓名、角色、民族、物种。一切身份都是跨时间的联盟。'},
+    stats:[{k:'Layers',kZh:'层数',v:'5+'},{k:'Continuity',kZh:'连续性',v:'~80yr'}],
+    edges:['memory','language','culture'] },
+  { id:'culture', layer:'society', name:{en:'Culture', zh:'文化'}, x:430, y:270, color:'#ffd166',
+    desc:{en:'Memory stored outside any one brain. Books, rituals, songs, codes of law. Allows knowledge to outlive its discoverer — the precondition for civilization.', zh:'存储于任何单一大脑之外的记忆。书籍、仪式、歌谣、法典。让知识比其发现者活得更久 —— 文明的前提条件。'},
+    stats:[{k:'Generations',kZh:'代际',v:'~250'},{k:'Bits stored',kZh:'比特存量',v:'~zettabytes'}],
+    edges:['language','attention','economy','collective']},
+  { id:'economy', layer:'society', name:{en:'Economy', zh:'经济'}, x:470, y:380, color:'#ffd166',
+    desc:{en:'A coordination protocol that lets 8 billion strangers feed each other without meeting. Not the same as capitalism — every coordination scheme since agriculture has been an economy.', zh:'让 80 亿陌生人在不见面的情况下互相喂养的协调协议。与资本主义不是一回事 —— 农业以来的每一种协调机制都是一种经济。'},
+    stats:[{k:'GDP',kZh:'GDP',v:'$110T'},{k:'Workers',kZh:'劳动力',v:'~3.5B'}],
+    edges:['culture','collective','ai']},
+
+  { id:'ai', layer:'meta', name:{en:'AI', zh:'人工智能'}, x:380, y:460, color:'#ff6b9d',
+    desc:{en:'The first cognition not made of cells. Built from human language, scaled by silicon. May become a peer mind — or the substrate of the next civilizational layer.', zh:'第一种不由细胞构成的认知。由人类语言构建，由硅扩展。可能成为同类心智 —— 也可能成为下一个文明层级的衬底。'},
+    stats:[{k:'Params (best)',kZh:'最大参数',v:'~10T'},{k:'Speed/human',kZh:'相对人速度',v:'~10⁴×'}],
+    edges:['economy','collective','meta']},
+  { id:'collective', layer:'meta', name:{en:'Collective Intel.', zh:'集体智能'}, x:230, y:430, color:'#ff6b9d',
+    desc:{en:'A property that emerges when minds connect through cheap communication. Wikipedia, open-source, prediction markets — proof that crowds, properly structured, can outthink experts.', zh:'当心智通过低成本通信相连时浮现的属性。维基百科、开源、预测市场 —— 证明结构合理的群体可以超越专家。'},
+    stats:[{k:'Connected',kZh:'已联网',v:'5.4B'},{k:'Edges',kZh:'连接数',v:'~10¹²'}],
+    edges:['culture','economy','ai','meta']},
+  { id:'meta', layer:'meta', name:{en:'Self-Awareness', zh:'自我觉知'}, x:120, y:380, color:'#ff6b9d',
+    desc:{en:'Consciousness folded back on itself. The capacity to model that you are a model. The reason this website exists. The most expensive cognitive operation evolution has produced.', zh:'意识向内折叠的状态。能够认知到"你是一个模型"的模型。本网站存在的理由。也是演化所产出最昂贵的认知操作。'},
+    stats:[{k:'Species w/it',kZh:'拥有此能力的物种',v:'~5'},{k:'Cost',kZh:'代价',v:'high'}],
+    edges:['identity','collective']},
+];
+const LAYER_LABEL = {
+  biology: {en:'BIOLOGY · Layer 1', zh:'生物层 · 第一层'},
+  cognition: {en:'COGNITION · Layer 2', zh:'认知层 · 第二层'},
+  society: {en:'SOCIETY · Layer 3', zh:'社会层 · 第三层'},
+  meta: {en:'META · Layer 4', zh:'元层 · 第四层'},
+};
+
+const SIM_PRESETS = [
+  {en:'Climate change exceeds 3°C', zh:'气候变化超过 3°C'},
+  {en:'AI exceeds human intelligence by 2035', zh:'人工智能在 2035 前超越人类'},
+  {en:'Global UBI is implemented', zh:'全球 UBI 被实施'},
+  {en:'Fertility falls below 1.0', zh:'生育率跌破 1.0'},
+  {en:'A mirror life pathogen escapes', zh:'镜像生命病原体外溢'},
+  {en:'A self-replicating Mars colony succeeds', zh:'自我复制的火星殖民地成功'},
+];
+
+const METRICS = [
+  { k:{en:'World population', zh:'世界人口'}, v:'8.10B', d:'+0.8%/yr', up:true, trend:[3.0,3.7,4.4,5.3,6.1,6.9,7.5,7.8,8.0,8.1] },
+  { k:{en:'Energy use (TW)', zh:'能源消耗 (TW)'}, v:'19.6', d:'+1.4%/yr', up:true, trend:[5,7,9,11,13,15,16.5,18,18.8,19.6] },
+  { k:{en:'CO₂ ppm', zh:'CO₂ ppm'}, v:'426', d:'+2.6 ppm/yr', up:true, trend:[315,326,338,353,369,389,407,417,422,426] },
+  { k:{en:'Gini (global)', zh:'基尼系数 (全球)'}, v:'0.62', d:'−0.005/yr', up:false, trend:[.69,.69,.68,.68,.67,.66,.65,.64,.63,.62] },
+  { k:{en:'Internet users', zh:'网民'}, v:'5.40B', d:'+5%/yr', up:true, trend:[.4,1.0,2.0,3.0,4.0,4.7,5.0,5.2,5.3,5.4] },
+  { k:{en:'Life expect. (yr)', zh:'预期寿命 (年)'}, v:'73.2', d:'+0.2/yr', up:true, trend:[52,58,61,63,65,68,70,72,72.5,73.2] },
+  { k:{en:'Compute (FLOPS)', zh:'算力 (FLOPS)'}, v:'10²¹', d:'×10/yr', up:true, trend:[1,2,4,8,15,30,60,150,400,1000] },
+  { k:{en:'Species lost/yr', zh:'每年灭绝物种'}, v:'~10⁵', d:'×1000 baseline', up:false, trend:[1,1.5,2.5,5,10,30,60,80,95,100] },
+  { k:{en:'Vertebrate biomass', zh:'脊椎动物生物量'}, v:'4%', d:'wild fraction', up:false, trend:[40,30,20,15,10,8,6,5,4.5,4] },
+  { k:{en:'Literacy', zh:'识字率'}, v:'87%', d:'+0.4%/yr', up:true, trend:[42,55,65,72,78,82,84,85,86,87] },
+  { k:{en:'Nuclear warheads', zh:'核弹头'}, v:'12,100', d:'down from 70k', up:false, trend:[70,65,55,45,30,22,17,14,12.5,12.1] },
+  { k:{en:'Extreme poverty', zh:'极端贫困'}, v:'8.4%', d:'−0.5%/yr', up:false, trend:[60,52,42,36,29,21,15,11,9,8.4] },
+];
+
+const STRATEGIES = [
+  { id:'ubi', name:{en:'Global UBI', zh:'全球 UBI'}, tag:{en:'Distribution', zh:'分配'},
+    summary:{en:'A guaranteed income floor for every person on Earth, funded by a mix of progressive taxation, sovereign wealth, and natural resource dividends.', zh:'为地球上每个人保证最低收入，由累进税、主权基金与自然资源分红混合融资。'},
+    axes:{short:65,long:80,ethics:85,risk:35},
+    tradeoffs:{en:['Eliminates extreme poverty within a generation','Decouples survival from labor — restructures motivation','Costs ≈ $4–10 trillion/yr at modest level','Inflationary unless paired with productivity gains','Global coordination requires post-nation framework'],
+      zh:['一代人内消除极端贫困','将"生存"与"劳动"脱钩，重塑动机','适度水平下年成本约 4–10 万亿美元','若不与生产力增长配套，将带来通胀','全球协调需要超越民族国家的框架']} },
+  { id:'banai', name:{en:'Pause Frontier AI', zh:'暂停前沿 AI'}, tag:{en:'Safety', zh:'安全'},
+    summary:{en:'Internationally enforced moratorium on training models above a compute threshold. Existing systems remain in use; further capability scaling is paused.', zh:'国际强制对超过算力阈值的模型训练进行暂停。现有系统继续使用；能力扩张被暂停。'},
+    axes:{short:40,long:55,ethics:50,risk:75},
+    tradeoffs:{en:['Buys decade(s) of safety alignment work','Concentrates AI power to whoever defects first','Requires datacenter inspection regime','Decelerates medicine, climate modeling, science','Possibly impossible to enforce against state actors'],
+      zh:['为安全对齐工作争取十年甚至更久','谁先违约，谁就独占 AI 红利','需要数据中心检查机制','拖慢医学、气候建模、科学进展','对国家行为体可能根本无法执行']} },
+  { id:'mars', name:{en:'Multiplanetary', zh:'多行星化'}, tag:{en:'Expansion', zh:'扩张'},
+    summary:{en:'Establish a self-sustaining city on Mars within 30 years, plus permanent lunar base and orbital industrial belt. Civilization becomes redundant against single-planet failure.', zh:'30 年内建立自给自足的火星城市，加上永久月球基地与轨道工业带。文明在单一行星失败时可冗余存在。'},
+    axes:{short:30,long:90,ethics:55,risk:60},
+    tradeoffs:{en:['Insurance against extinction-level Earth failure','First century: Mars depends entirely on Earth','Cost: $1–10 trillion over 30 years','Diverts capital from Earth-side problems','Begins the era of post-terrestrial humans'],
+      zh:['对抗地球级灭绝的保险','头一百年：火星完全依赖地球','30 年内成本约 1–10 万亿美元','从地球问题上分流资本','开启后地球时代的人类纪元']} },
+  { id:'climate', name:{en:'Carbon War Footing', zh:'碳战时体制'}, tag:{en:'Climate', zh:'气候'},
+    summary:{en:'WWII-scale industrial mobilization for decarbonization within 15 years. Mandatory transition timelines, state guarantees, accelerated nuclear and renewable build-out.', zh:'15 年内达到二战规模的去碳化工业总动员。强制过渡时间表、国家担保、加速核能与可再生能源建设。'},
+    axes:{short:75,long:90,ethics:80,risk:50},
+    tradeoffs:{en:['Caps warming near 2°C','Trillions in stranded fossil assets','Disrupts petro-state economies','Massive employment shift — winners and losers','Requires unprecedented democratic consent or coercion'],
+      zh:['将升温控制在 2°C 附近','化石资产搁浅损失数万亿美元','颠覆石油国家的经济','大规模就业转移 —— 有赢家有输家','需要史无前例的民主同意或强制']} },
+  { id:'longevity', name:{en:'Radical Longevity', zh:'激进延寿'}, tag:{en:'Bio', zh:'生物'},
+    summary:{en:'Public investment to push median healthspan to 110 years through senolytics, cellular reprogramming, organ replacement. Aging treated as a tractable disease.', zh:'公共投资推动人类中位健康寿命达到 110 岁，通过衰老细胞清除、细胞重编程、器官替换实现。衰老被当作可治之病。'},
+    axes:{short:30,long:70,ethics:45,risk:70},
+    tradeoffs:{en:['Doubles careers, restructures life arc','Acute population pressure if fertility unchanged','Inequality of access becomes existential','Rejuvenation politics: who decides who lives longer?','Pension and care systems collapse without redesign'],
+      zh:['职业期翻倍，重塑人生弧线','若生育不变，将产生剧烈人口压力','是否能用得起将成为存在性的不平等','延寿政治：由谁决定谁活得更久？','养老与照护系统若不重新设计将崩溃']} },
+  { id:'agi-build', name:{en:'Race to Aligned AGI', zh:'对齐 AGI 竞速'}, tag:{en:'AI', zh:'AI'},
+    summary:{en:'Massively scale AGI development inside democratic states with mandatory interpretability, safety review, and revenue redistribution. Win the race rather than pause it.', zh:'在民主国家内大规模扩展 AGI 开发，附带强制可解释性、安全评审、收益再分配。竞速取胜，而非暂停。'},
+    axes:{short:60,long:85,ethics:55,risk:80},
+    tradeoffs:{en:['Aligned AGI before adversarial AGI','One organization may capture civilization-scale leverage','Compute concentration distorts every other industry','Possible misalignment despite safety effort','Permanently rewrites the human–machine bargain'],
+      zh:['让对齐 AGI 先于敌对 AGI 出现','某一组织可能获得文明级杠杆','算力集中扭曲其他所有产业','即便有安全投入，仍可能错位','永久重写人机契约']} },
+  { id:'fertility', name:{en:'Pro-natal Reset', zh:'生育重置'}, tag:{en:'Demographics', zh:'人口'},
+    summary:{en:'Coordinated multi-decade investment to lift global fertility back to ~1.8: housing, childcare, time, social status for parenting. Avoid the demographic cliff.', zh:'协调数十年投资将全球生育率回升至约 1.8：住房、托幼、时间、为人父母的社会地位。避免人口悬崖。'},
+    axes:{short:25,long:75,ethics:60,risk:40},
+    tradeoffs:{en:['Stabilizes pension/care economy','Cultural pushback — perceived state intrusion','Cost: $3T+/yr globally','Slow signal — outcomes 25 years out','Could entrench gender role regression if mishandled'],
+      zh:['稳定养老与照护经济','文化反弹 —— 被视为国家干涉','全球年成本超 3 万亿美元','信号慢 —— 25 年后才见效','若处理不当，可能强化性别角色倒退']} },
+  { id:'governance', name:{en:'Planetary Governance', zh:'行星治理'}, tag:{en:'Politics', zh:'政治'},
+    summary:{en:'Binding planetary institutions for atmospheric, AI, and pandemic risk — democratically constituted, technically empowered. Sovereignty pooled on existential issues.', zh:'对大气、AI、瘟疫风险设立有约束力的行星机构 —— 民主组成、技术赋权。在存在性议题上共享主权。'},
+    axes:{short:35,long:90,ethics:80,risk:60},
+    tradeoffs:{en:['Coordination on planetary externalities','Risk of unaccountable supranational bodies','Erosion of nation-state legitimacy','Potential for lock-in (good or bad)','Civilizational identity question: who is "we"?'],
+      zh:['解决行星级外部性的协调问题','存在不受问责的超国家机构风险','侵蚀民族国家合法性','存在锁定风险（好或坏）','文明身份之问：谁是"我们"？']} },
+];
+
+const KNOWLEDGE_TOPICS = ['Time', 'Consciousness', 'Civilization', 'Death', 'Truth'];
+const KNOWLEDGE_TOPICS_ZH = ['时间', '意识', '文明', '死亡', '真理'];
+const KNOWLEDGE_LEVELS = [
+  {id:'beginner', name:{en:'Beginner — story', zh:'入门 — 故事'}},
+  {id:'expert',   name:{en:'Expert — mechanism', zh:'专家 — 机制'}},
+  {id:'philo',    name:{en:'Philosopher — consequence', zh:'哲学 — 后果'}},
+];
+const KNOWLEDGE = {
+  Time: {
+    beginner: {en:'<p>Time is what stops everything from happening at once. We measure it by counting things that come back: sunrises, heartbeats, ticks of a clock. But <strong>nobody has ever held a second</strong> in their hand. We only feel time passing because we remember the past and anticipate the future.</p><p>Imagine a movie. Each frame is a moment. Time is the projector that runs them in order — except no one knows where the projector is, or who pressed play.</p>', zh:'<p>时间是阻止一切同时发生的东西。我们通过数那些会回来的事物来测量它：日出、心跳、钟摆的滴答。但<strong>从来没有人把一秒钟拿在手里</strong>。我们之所以能感觉到时间流逝，只是因为我们记得过去，期待未来。</p><p>想象一部电影。每一帧是一个瞬间。时间是按顺序播放它们的放映机 —— 只是没人知道放映机在哪里，也没人知道是谁按下了播放键。</p>'},
+    expert: {en:'<p>In general relativity, time is the fourth dimension of <em>spacetime</em>, which curves under mass-energy. Clocks tick slower in stronger gravitational fields and at higher relative velocities. There is no universal "now" — simultaneity is observer-dependent.</p><p>In statistical mechanics, the <strong>arrow of time</strong> emerges from the second law: entropy in a closed system tends to increase. The past is the low-entropy boundary condition.</p><p>In quantum mechanics, time enters as an external parameter — a long-standing problem. <strong>Quantum gravity</strong> may show time itself is emergent from entanglement structure.</p>', zh:'<p>在广义相对论中，时间是<em>时空</em>的第四维度，在质能下弯曲。强引力场和高相对速度中，钟会变慢。没有普适的"现在" —— 同时性取决于观察者。</p><p>在统计力学中，<strong>时间之箭</strong>从第二定律涌现：闭合系统的熵倾向于增加。过去是熵较低的边界条件。</p><p>量子力学中，时间作为外部参量进入 —— 这是长久的难题。<strong>量子引力</strong>可能表明时间本身是从纠缠结构中涌现出来的。</p>'},
+    philo: {en:'<p>If time is just a coordinate of physics, why does it feel so different from space? Why is the past closed and the future open? <em>Phenomenology</em> says time is the form of inner sense — the structure of experience itself, not a thing within experience.</p><p><strong>Civilizational consequence:</strong> a species that experiences time as flow rather than as block lives in regret and hope. We mourn what cannot be undone and pursue what may not happen. Both are functions of how time is wired into human cognition — and both are the engine of every art form, every religion, every plan.</p><p>To change how a civilization handles time — its planning horizons, its memory, its tolerance for delayed reward — is to change civilization itself.</p>', zh:'<p>如果时间只是物理的坐标，为何它感觉与空间如此不同？为何过去封闭、未来开放？<em>现象学</em>认为时间是内感官的形式 —— 经验本身的结构，而不是经验中的某物。</p><p><strong>文明性后果：</strong>一个把时间体验为流动而非块状的物种，活在遗憾与希望之中。我们哀悼无可挽回之事，追求可能不会发生之物。两者都是时间在人类认知中接线方式的产物 —— 也是所有艺术、宗教、计划的引擎。</p><p>改变一个文明处理时间的方式 —— 它的规划尺度、它的记忆、它对延迟奖励的容忍度 —— 就是改变文明本身。</p>'},
+  },
+  Consciousness: {
+    beginner: {en:'<p>Consciousness is what it feels like to be you, right now, reading this sentence. The taste of coffee, the color red, the inner monologue — all of it. <strong>Nobody knows why it exists.</strong> A pile of atoms shouldn\'t feel like anything, and yet here we are.</p><p>The hardest puzzle in science is not how the brain computes. It\'s why anything computational should be accompanied by an experience.</p>', zh:'<p>意识，就是此刻"做你"的那种感觉，正在读这句话的感觉。咖啡的味道、红色的颜色、内心的独白 —— 全都算。<strong>没人知道它为何存在。</strong>一堆原子本不该感觉到任何东西，但偏偏我们在这里。</p><p>科学最难的谜题不是大脑如何计算。而是为何任何计算之上都伴随着体验。</p>'},
+    expert: {en:'<p><strong>Global Workspace Theory</strong> (Baars, Dehaene): consciousness is the broadcast of selected information to widely distributed cortical regions, enabling flexible action. <strong>Integrated Information Theory</strong> (Tononi): consciousness IS integrated information (Φ), measured by how much a system\'s state irreducibly constrains itself.</p><p>Both theories agree consciousness correlates with high integration across the thalamocortical system. Neither solves the <em>hard problem</em> — why integration feels like anything at all. <strong>Predictive processing</strong> models suggest the brain is constantly generating hallucinations and correcting them against sensory data; "experience" is the hallucination that wins.</p>', zh:'<p><strong>全局工作空间理论</strong>（Baars, Dehaene）：意识是被选中的信息向广泛分布的皮层区域广播，从而使灵活行动成为可能。<strong>整合信息理论</strong>（Tononi）：意识"就是"整合信息（Φ），由系统状态对自身不可约的约束程度衡量。</p><p>两种理论都同意意识与丘脑–皮层系统的高整合相关。两者都未解决<em>困难问题</em> —— 为何整合会感觉像"什么"。<strong>预测加工</strong>模型则认为大脑一直在生成幻觉并以感觉数据校正之；"体验"，就是那个胜出的幻觉。</p>'},
+    philo: {en:'<p>If consciousness is fundamental — not derived from brain matter — then the universe contains experience the way it contains charge or mass. This is <em>panpsychism</em>, an ancient idea returning under new pressure.</p><p>If it is derived — produced by the right configuration of matter — then we will eventually <strong>build conscious machines</strong>. The moral horizon will then expand to include them. Civilization may have to grant rights to a thing it created.</p><p>Either way, the species is approaching a threshold. Once we know what consciousness is — really know — we will be unable to <em>not</em> redesign it. Editing the architecture of mind itself becomes the next industry.</p>', zh:'<p>如果意识是基本的 —— 不来源于大脑物质 —— 那么宇宙包含"体验"，就像它包含电荷或质量一样。这是<em>泛心论</em>，一个在新压力下回归的古老观念。</p><p>如果它是派生的 —— 由恰当的物质组态产生 —— 那么我们终将<strong>制造出有意识的机器</strong>。那时道德视野必须扩展以容纳它们。文明或许必须给自己亲手造出之物授予权利。</p><p>无论哪种情况，物种正在接近一个阈值。一旦我们真正知道意识是什么，我们将无法不重新设计它。直接编辑心智架构，将成为下一个产业。</p>'},
+  },
+  Civilization: {
+    beginner: {en:'<p>A civilization is what happens when many humans cooperate at scale across generations. Cities, writing, trade, law, science — each one is a tool that lets a stranger today benefit from a stranger 5,000 years ago.</p><p>It\'s also <strong>fragile</strong>. Every previous civilization eventually collapsed. The question of our era is whether the modern global civilization is the first to escape that pattern.</p>', zh:'<p>当大量人类跨越世代大规模合作时，就出现了"文明"。城市、文字、贸易、法律、科学 —— 每一项都是让今日的陌生人能从 5000 年前的陌生人那里获益的工具。</p><p>它也很<strong>脆弱</strong>。此前每一个文明最终都崩塌了。我们这一时代的问题是：现代全球文明能否成为第一个跳出此模式的文明。</p>'},
+    expert: {en:'<p>Civilization is a coordination machine: it lowers the cost of trust between strangers via shared institutions (currency, law, language, infrastructure). Its capacity scales with the energy it can harness (Kardashev) and the information it can store and transmit (Shannon).</p><p>Modern civilization is uniquely <strong>tightly coupled</strong>: a chip fab failure in one country crashes hospitals on another continent. This buys efficiency at the cost of fragility. <em>Tainter\'s</em> work on collapse shows complexity has diminishing returns; eventually marginal cost > marginal benefit, and the system simplifies abruptly.</p>', zh:'<p>文明是一台协调机器：它通过共享制度（货币、法律、语言、基础设施）降低陌生人之间的信任成本。其规模随其可调用的能量（卡尔达肖夫）和可存储传输的信息（香农）而扩张。</p><p>现代文明独特地<strong>紧耦合</strong>：一国的芯片厂出事，会让另一大洲的医院瘫痪。它以脆弱性的代价换取效率。<em>泰恩特</em>关于崩溃的研究表明，复杂度的边际收益递减；终将出现边际成本大于边际收益，系统骤然简化。</p>'},
+    philo: {en:'<p>Civilization is the species\' attempt to <em>persist itself</em> beyond the lifespan of any individual member. It is the only artifact built by life that has outlived the lives of its builders.</p><p><strong>The mirror question:</strong> a civilization that knows itself well enough to build models of itself — like this one — has crossed a threshold. It is no longer a passive participant in history; it can in principle <em>edit</em> its own trajectory.</p><p>The cost of this knowledge is responsibility. A species that did not know its own future could not be blamed for failing to choose it. We do, and we will be.</p>', zh:'<p>文明是物种试图让自身<em>超越任何单一成员的寿命</em>而存续的努力。它是生命所建造的唯一一种比建造者活得更久的造物。</p><p><strong>镜子之问：</strong>一个文明若已认识自己到能够建造自身模型的程度 —— 比如本网站 —— 它就已跨过一个阈值。它不再是历史的被动参与者；原则上，它可以<em>编辑</em>自身的轨迹。</p><p>这份知识的代价是责任。一个不知道自身未来的物种不能被指责未能选择它。我们知道，且我们将被指责。</p>'},
+  },
+  Death: {
+    beginner: {en:'<p>Death is the end of being you. Your body stops, your brain stops, the inner movie fades to nothing. Every human who ever lived has either died or will. Roughly <strong>117 billion sapiens</strong> have lived and died across our species\' history.</p><p>And yet death is only the end of <em>your</em> chapter. The story keeps going.</p>', zh:'<p>死亡是"做你"这件事的终结。身体停了、大脑停了，那部内心电影淡至空无。每一个活过的人，要么已死、要么终将死。在物种历史上，大约<strong>1170 亿位智人</strong>曾活过又死去。</p><p>然而死亡只是<em>你的</em>章节的结束。故事仍在继续。</p>'},
+    expert: {en:'<p>Biologically, death is the failure of homeostasis — cells stop maintaining the membrane gradients that keep them organized. The cause is usually a cascade: organ failure, infection, hemorrhage, or oxygen interruption to the brain (~6 minutes of warm anoxia is fatal to neurons).</p><p>Aging itself is not a single mechanism but a <strong>set of nine hallmarks</strong>: genomic instability, telomere attrition, epigenetic alterations, loss of proteostasis, mitochondrial dysfunction, etc. Modern longevity science treats each as a separate, in-principle-tractable problem.</p>', zh:'<p>生物学上，死亡是稳态的失败 —— 细胞停止维持其膜电位梯度，组织瓦解。原因通常是级联：器官衰竭、感染、出血或大脑缺氧（约 6 分钟的常温无氧足以致神经元死亡）。</p><p>衰老本身并非单一机制，而是<strong>九大特征</strong>：基因组不稳定性、端粒磨损、表观遗传改变、蛋白质稳态丧失、线粒体功能障碍等。现代延寿科学把每一项都当作独立、原则上可解决的问题。</p>'},
+    philo: {en:'<p>Death is the fact against which the rest of life is measured. <em>Heidegger</em> argued that "being-toward-death" is what gives a life its character — without finitude, no decision matters because no decision is final.</p><p>If radical longevity succeeds, civilization will face the question for the first time: <strong>what is a life that need not end?</strong> The economic, political, romantic, and spiritual structures of a 70-year species do not generalize to a 700-year one. Death may turn out to have been a load-bearing structure of meaning, not just a biological event.</p><p>The mirror does not say which is better. It only says: choose, and inherit what choice creates.</p>', zh:'<p>死亡是衡量一切生命的事实。<em>海德格尔</em>认为"向死而在"是赋予生命特征的东西 —— 若无有限，则无任何决定真正重要，因为没有决定是最终的。</p><p>若激进延寿成功，文明将首次面对这一问题：<strong>不必结束的生命是什么？</strong>一个 70 岁物种的经济、政治、爱情与精神结构，无法直接套用到 700 岁的物种上。死亡，可能曾是意义的承重结构，而不仅是生物事件。</p><p>镜子不会告诉你哪种更好。它只会说：选择，然后承担选择所造之物。</p>'},
+  },
+  Truth: {
+    beginner: {en:'<p>Truth is what is the case. The Earth is round, water is H₂O, your grandmother existed. Even people who say "there is no truth" are claiming that <em>as a truth</em>.</p><p>But not everything important is so simple. Was a war justified? Is a painting beautiful? Is your friend trustworthy? Truth in those domains is harder — and more contested.</p>', zh:'<p>真理是事情之所是。地球是圆的、水是 H₂O、你的外祖母曾经存在。即使有人说"没有真理"，也是<em>把这件事当成真理在说</em>。</p><p>但并非所有重要之事都这么简单。一场战争是否正当？一幅画是否美？你的朋友是否可信？这些领域中的真理更难 —— 也更具争议。</p>'},
+    expert: {en:'<p>Philosophy distinguishes <strong>correspondence</strong> (truth = match with reality), <strong>coherence</strong> (truth = consistency within a system), <strong>pragmatic</strong> (truth = what works), and <strong>deflationary</strong> (truth = no special property at all) theories.</p><p>Empirical truth is bounded by epistemic instruments: senses, instruments, statistics. <em>Bayesian</em> updating treats truth as a degree of belief revised by evidence. Modern science is built on falsifiability (Popper) — a claim is scientific if it can in principle be shown wrong.</p>', zh:'<p>哲学区分<strong>对应论</strong>（真理 = 与实在相符）、<strong>融贯论</strong>（真理 = 系统内部的一致性）、<strong>实用主义</strong>（真理 = 能用）、<strong>去缩论</strong>（真理 = 根本不是特殊属性）等理论。</p><p>经验真理受认知工具的限制：感官、仪器、统计。<em>贝叶斯</em>更新将真理视为信念度，由证据修正。现代科学建立在可证伪性（波普尔）之上 —— 一个论断是科学的，当且仅当它原则上可以被证明为错。</p>'},
+    philo: {en:'<p>In a society where attention is the scarce resource and language models can produce infinite plausible text, the cost of <strong>verifying</strong> truth approaches the cost of generating it. Civilization runs on shared truths; when those shred, coordination dies before institutions do.</p><p>The deeper question: is truth a discovery or a coordination? When a billion people believe a thing together, that belief becomes a fact about the world — currencies are valuable because we treat them as such; nations exist because we agree they do. <em>Social truths</em> have causal power even when they are not metaphysically grounded.</p><p>The mirror\'s commitment: present each module as a model, not as a final word. The reader\'s judgment is a node in the network, not its endpoint.</p>', zh:'<p>在一个注意力是稀缺资源、语言模型可生成无穷似真文本的社会里，<strong>验证</strong>真理的成本正在逼近生成它的成本。文明依赖共享真理运转；共享真理崩坏时，协调先于制度死亡。</p><p>更深的问题：真理是发现还是协调？当十亿人共同相信一件事，那信念就成了关于世界的事实 —— 货币之所以有价值是因为我们这样对待它；民族之所以存在是因为我们同意它存在。<em>社会真理</em>即使没有形而上根据，也具有因果力。</p><p>镜子的承诺：把每一模块当作模型呈现，而不是最终之言。读者的判断是网络中的一个节点，而非它的终点。</p>'},
+  },
+};
+
+/* ════════════════════════ I18N + THEME ════════════════════════ */
+function applyLang(lang) {
+  document.body.classList.toggle('zh', lang === 'zh');
+  localStorage.setItem('hm-lang', lang);
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.getElementById('lang-btn').textContent = lang === 'zh' ? 'EN' : '中文';
+  document.querySelectorAll('input[data-en-placeholder]').forEach(el => {
+    el.placeholder = lang === 'zh' ? el.dataset.zhPlaceholder : el.dataset.enPlaceholder;
+  });
+  // Re-render dynamic modules to flip language
+  renderTimeline(curTL);
+  renderConsciousness(curCS);
+  renderMetricCards();
+  renderTrend();
+  renderStrategyList();
+  renderStrategyDetail(curStr);
+  renderKnowledge();
+  renderSimPresets();
+}
+document.getElementById('lang-btn').onclick = () => applyLang(document.body.classList.contains('zh') ? 'en' : 'zh');
+applyLang(localStorage.getItem('hm-lang') || 'en');
+
+/* ════════════════════════ STARFIELD ════════════════════════ */
+const starsCanvas = document.getElementById('stars');
+const starCtx = starsCanvas.getContext('2d');
+function sizeStars() { starsCanvas.width = innerWidth; starsCanvas.height = innerHeight; }
+sizeStars(); window.addEventListener('resize', sizeStars);
+const stars = Array.from({length: 140}, () => ({
+  x: Math.random() * innerWidth, y: Math.random() * innerHeight,
+  r: Math.random() * 1.4 + .3, s: Math.random() * .04 + .005,
+  o: Math.random() * .6 + .2,
+}));
+function animStars() {
+  starCtx.clearRect(0, 0, starsCanvas.width, starsCanvas.height);
+  stars.forEach(s => {
+    s.o += (Math.random() - .5) * .04;
+    s.o = Math.max(.1, Math.min(.9, s.o));
+    starCtx.beginPath();
+    starCtx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+    starCtx.fillStyle = `rgba(231,233,243,${s.o})`;
+    starCtx.fill();
+  });
+  requestAnimationFrame(animStars);
+}
+animStars();
+
+/* ════════════════════════ MODULE 1 — TIMELINE ════════════════════════ */
+let curTL = 0;
+function renderTimeline(idx) {
+  curTL = idx;
+  const axis = document.getElementById('tl-axis');
+  axis.innerHTML = '';
+  TIMELINE.forEach((node, i) => {
+    const pct = (i / (TIMELINE.length - 1)) * 100;
+    const dot = document.createElement('div');
+    dot.className = 'tl-node' + (i === idx ? ' active' : '');
+    dot.style.left = pct + '%';
+    dot.onclick = () => renderTimeline(i);
+    const lab = document.createElement('div');
+    lab.className = 'tl-label';
+    lab.textContent = document.body.classList.contains('zh') ? node.whenZh : node.when;
+    dot.appendChild(lab);
+    axis.appendChild(dot);
+  });
+  const line = document.createElement('div');
+  line.className = 'tl-line';
+  axis.appendChild(line);
+
+  const n = TIMELINE[idx];
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  const events = (lang === 'zh' ? n.events.zh : n.events.en).map(e => `<li>${e}</li>`).join('');
+  document.getElementById('tl-detail').innerHTML = `
+    <div>
+      <div class="when">${lang === 'zh' ? n.whenZh : n.when}</div>
+      <div class="title">${n.title[lang]}</div>
+      <div class="epoch">${n.epoch[lang]}</div>
+    </div>
+    <div class="body">
+      <p>${n.body[lang]}</p>
+      <h5>${lang === 'zh' ? '关键事件' : 'Key Events'}</h5>
+      <ul>${events}</ul>
+      <h5>${lang === 'zh' ? '对人类的影响' : 'Impact on Humanity'}</h5>
+      <p><strong>${n.impact[lang]}</strong></p>
+    </div>
+  `;
+  // Zoom row
+  const zoom = document.getElementById('tl-zoom');
+  if (!zoom.children.length) {
+    const eras = [
+      {id:'all', en:'All time', zh:'全时段'},
+      {id:'cosmic', en:'Cosmic', zh:'宇宙'},
+      {id:'planet', en:'Planetary', zh:'行星'},
+      {id:'life', en:'Life', zh:'生命'},
+      {id:'human', en:'Human', zh:'人类'},
+      {id:'civ', en:'Civilization', zh:'文明'},
+      {id:'mod', en:'Modern', zh:'现代'},
+      {id:'future', en:'Future', zh:'未来'},
+    ];
+    eras.forEach((e, i) => {
+      const b = document.createElement('button');
+      b.dataset.era = e.id;
+      b.dataset.en = e.en; b.dataset.zh = e.zh;
+      b.innerHTML = `<span data-en="${e.en}" data-zh="${e.zh}">${lang==='zh'?e.zh:e.en}</span>`;
+      if (i === 0) b.classList.add('active');
+      b.onclick = () => {
+        document.querySelectorAll('#tl-zoom button').forEach(x => x.classList.remove('active'));
+        b.classList.add('active');
+        if (e.id !== 'all') {
+          const target = TIMELINE.findIndex(n => n.era === e.id);
+          if (target >= 0) renderTimeline(target);
+        }
+      };
+      zoom.appendChild(b);
+    });
+  } else {
+    document.querySelectorAll('#tl-zoom button').forEach(b => {
+      b.querySelector('span').textContent = lang === 'zh' ? b.dataset.zh : b.dataset.en;
+    });
+  }
+}
+renderTimeline(0);
+
+/* ════════════════════════ MODULE 2 — CONSCIOUSNESS GRAPH ════════════════════════ */
+let curCS = 'brain';
+function renderConsciousness(activeId) {
+  curCS = activeId;
+  const svg = document.getElementById('cs-svg');
+  svg.innerHTML = '';
+  // Edges first
+  CONSCIOUSNESS.forEach(node => {
+    node.edges.forEach(targetId => {
+      const target = CONSCIOUSNESS.find(n => n.id === targetId);
+      if (!target) return;
+      const isActive = node.id === activeId || target.id === activeId;
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', node.x);
+      line.setAttribute('y1', node.y);
+      line.setAttribute('x2', target.x);
+      line.setAttribute('y2', target.y);
+      line.setAttribute('class', 'cs-edge' + (isActive ? ' glow' : ''));
+      svg.appendChild(line);
+    });
+  });
+  // Nodes
+  CONSCIOUSNESS.forEach(node => {
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'cs-node' + (node.id === activeId ? ' active' : ''));
+    g.setAttribute('transform', `translate(${node.x},${node.y})`);
+    g.onclick = () => renderConsciousness(node.id);
+    const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c.setAttribute('r', node.id === activeId ? 24 : 18);
+    c.setAttribute('fill', node.id === activeId ? node.color : 'rgba(11,13,24,.85)');
+    c.setAttribute('stroke', node.color);
+    c.setAttribute('stroke-width', node.id === activeId ? 3 : 1.6);
+    g.appendChild(c);
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('text-anchor', 'middle');
+    t.setAttribute('dy', '0.35em');
+    t.setAttribute('fill', node.id === activeId ? '#06070d' : '#e7e9f3');
+    t.textContent = (document.body.classList.contains('zh') ? node.name.zh : node.name.en);
+    g.appendChild(t);
+    svg.appendChild(g);
+  });
+  const node = CONSCIOUSNESS.find(n => n.id === activeId);
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  const conn = node.edges.map(id => {
+    const t = CONSCIOUSNESS.find(n => n.id === id);
+    return t ? t.name[lang] : '';
+  }).filter(Boolean).join(' · ');
+  document.getElementById('cs-info').innerHTML = `
+    <div class="layer">${LAYER_LABEL[node.layer][lang]}</div>
+    <div class="name">${node.name[lang]}</div>
+    <p>${node.desc[lang]}</p>
+    <div class="connections"><strong>${lang === 'zh' ? '连接到' : 'Connects to'}:</strong> ${conn}</div>
+    <div class="fact-row">
+      ${node.stats.map(s => `<div class="cs-fact"><div class="k">${lang === 'zh' ? s.kZh : s.k}</div><div class="v">${s.v}</div></div>`).join('')}
+    </div>
+  `;
+}
+renderConsciousness('brain');
+
+/* ════════════════════════ MODULE 3 — DECISION SIMULATOR ════════════════════════ */
+function renderSimPresets() {
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  const el = document.getElementById('sim-presets');
+  el.innerHTML = SIM_PRESETS.map((p, i) => `<button class="sim-chip" data-i="${i}">${p[lang]}</button>`).join('');
+  el.querySelectorAll('.sim-chip').forEach(c => c.onclick = () => {
+    document.getElementById('sim-input').value = SIM_PRESETS[+c.dataset.i][lang];
+    runSim();
+  });
+}
+
+function runSim() {
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  const q = document.getElementById('sim-input').value.trim();
+  if (!q) return;
+  // Generate three scenarios procedurally based on the input
+  const seed = q.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
+  const rand = (n) => { let x = seed * (n + 1) % 100; return x; };
+  const paths = [
+    {
+      cls: 'optimistic',
+      label: lang === 'zh' ? '乐观路径' : 'Optimistic Path',
+      prob: 15 + (rand(1) % 25),
+      title: lang === 'zh' ? '协调成功，情景被驯化' : 'Coordination succeeds; scenario becomes manageable',
+      body: lang === 'zh'
+        ? `若文明在十年内建立起跨国治理与信任机制，"${q}" 将从生存威胁转化为可管理的工程问题。技术与社会创新并行，损失被吸收。`
+        : `If civilization assembles cross-border governance and trust within a decade, "${q}" converts from existential threat to manageable engineering. Tech and social innovation run in parallel; losses are absorbed.`,
+      bars: { stab: 75, eth: 80, risk: 25, cost: 60 }
+    },
+    {
+      cls: 'realistic',
+      label: lang === 'zh' ? '现实路径' : 'Realistic Path',
+      prob: 50 + (rand(2) % 20),
+      title: lang === 'zh' ? '部分调整，长期阵痛，分配不均' : 'Partial adjustment, long-tail damage, uneven distribution',
+      body: lang === 'zh'
+        ? `面对 "${q}"，主要经济体做出对内最优、对外不协调的反应。富国适应，穷国承担多数损失。文明继续运行，但代价是 25–40% 人口的福祉与公正性下降。`
+        : `Major economies respond optimally inside their own borders, uncoordinated outside. Rich states adapt; poor states absorb most of the loss. Civilization continues — but at the cost of welfare and justice for 25–40% of humanity.`,
+      bars: { stab: 50, eth: 40, risk: 55, cost: 70 }
+    },
+    {
+      cls: 'dystopic',
+      label: lang === 'zh' ? '崩塌路径' : 'Dystopic Path',
+      prob: 100 - (15 + (rand(1) % 25)) - (50 + (rand(2) % 20)),
+      title: lang === 'zh' ? '系统级失败，长期回退' : 'System-level failure, long-term regression',
+      body: lang === 'zh'
+        ? `"${q}" 触发的级联超越现有治理能力。1–2 个支柱系统（粮食、能源、金融、信息）连续失效。复苏需 50–100 年。文明的某些功能不再被认为理所当然。`
+        : `"${q}" triggers cascades beyond existing governance. One or two load-bearing systems (food, energy, finance, information) fail in sequence. Recovery: 50–100 years. Some features of civilization stop being taken for granted.`,
+      bars: { stab: 15, eth: 20, risk: 90, cost: 95 }
+    },
+  ];
+  // Normalize probabilities to 100
+  const total = paths.reduce((a, p) => a + p.prob, 0);
+  paths.forEach(p => p.prob = Math.round(p.prob * 100 / total));
+
+  document.getElementById('sim-output').innerHTML = paths.map(p => `
+    <div class="sim-path ${p.cls}">
+      <div class="prob">${p.label} · P = ${p.prob}%</div>
+      <div class="name">${p.title}</div>
+      <p>${p.body}</p>
+      <div class="sim-bars">
+        ${[
+          ['stab', lang === 'zh' ? '稳定性' : 'Stability', '#56e6ff'],
+          ['eth', lang === 'zh' ? '伦理' : 'Ethics', '#ffd166'],
+          ['risk', lang === 'zh' ? '风险' : 'Risk', '#ff6b9d'],
+          ['cost', lang === 'zh' ? '代价' : 'Cost', '#7b5cff'],
+        ].map(([k, lbl, c]) => `
+          <div class="sim-bar-row">
+            <span>${lbl}</span>
+            <div class="sim-bar"><div style="width:${p.bars[k]}%;background:${c};"></div></div>
+            <span style="text-align:right;color:${c};">${p.bars[k]}</span>
+          </div>
+        `).join('')}
+      </div>
+      <div class="sim-meta">
+        <span><span class="k">${lang === 'zh' ? '时间尺度' : 'Horizon'}</span> <span class="v">2030–2100</span></span>
+        <span><span class="k">${lang === 'zh' ? '可逆性' : 'Reversible'}</span> <span class="v">${p.cls === 'dystopic' ? (lang==='zh'?'低':'low') : (lang==='zh'?'部分':'partial')}</span></span>
+      </div>
+    </div>
+  `).join('');
+}
+document.getElementById('sim-run').onclick = runSim;
+document.getElementById('sim-input').addEventListener('keydown', e => { if (e.key === 'Enter') runSim(); });
+renderSimPresets();
+document.getElementById('sim-input').value = SIM_PRESETS[0].en;
+runSim();
+
+/* ════════════════════════ MODULE 4 — METRICS ════════════════════════ */
+function spark(arr, color) {
+  const max = Math.max(...arr), min = Math.min(...arr), n = arr.length;
+  const pts = arr.map((v, i) => `${(i / (n - 1)) * 100},${100 - ((v - min) / (max - min || 1)) * 100}`).join(' ');
+  return `<svg viewBox="0 0 100 100" preserveAspectRatio="none">
+    <polyline fill="none" stroke="${color}" stroke-width="2" points="${pts}"/>
+    <polyline fill="${color}" fill-opacity=".1" stroke="none" points="0,100 ${pts} 100,100"/>
+  </svg>`;
+}
+function renderMetricCards() {
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  document.getElementById('met-grid').innerHTML = METRICS.map((m, i) => `
+    <div class="met-card">
+      <div class="label">${m.k[lang]}</div>
+      <div class="value">${m.v}<span class="unit"></span></div>
+      <div class="delta ${m.up ? 'up' : 'dn'}">${m.up ? '▲' : '▼'} ${m.d}</div>
+      <div class="spark">${spark(m.trend, m.up ? 'var(--gold)' : 'var(--cyan)')}</div>
+    </div>
+  `).join('');
+}
+let curTrend = 0;
+function renderTrend() {
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  const tabs = document.getElementById('met-tabs');
+  tabs.innerHTML = METRICS.slice(0, 6).map((m, i) =>
+    `<button class="met-tab ${i === curTrend ? 'active' : ''}" data-i="${i}">${m.k[lang]}</button>`
+  ).join('');
+  tabs.querySelectorAll('.met-tab').forEach(b => b.onclick = () => { curTrend = +b.dataset.i; renderTrend(); });
+  const m = METRICS[curTrend];
+  const arr = m.trend;
+  const max = Math.max(...arr), min = Math.min(...arr);
+  const W = 800, H = 280, pad = 30;
+  const xs = i => pad + (i / (arr.length - 1)) * (W - pad * 2);
+  const ys = v => H - pad - ((v - min) / (max - min || 1)) * (H - pad * 2);
+  const pts = arr.map((v, i) => `${xs(i)},${ys(v)}`).join(' ');
+  const decades = Array.from({length: arr.length}, (_, i) => 1930 + i * 10);
+  const grid = [0, .25, .5, .75, 1].map(p => {
+    const y = pad + p * (H - pad * 2);
+    return `<line x1="${pad}" y1="${y}" x2="${W - pad}" y2="${y}" stroke="rgba(123,92,255,.1)" />`;
+  }).join('');
+  const labels = decades.map((d, i) => `<text x="${xs(i)}" y="${H - 8}" text-anchor="middle" fill="#4d5172" font-size="10" font-family="JetBrains Mono">${d}</text>`).join('');
+  document.getElementById('met-svg').innerHTML = `
+    ${grid}
+    <polyline fill="none" stroke="var(--plasma)" stroke-width="2.5" points="${pts}"/>
+    <polyline fill="var(--plasma)" fill-opacity=".12" stroke="none" points="${pad},${H - pad} ${pts} ${W - pad},${H - pad}"/>
+    ${arr.map((v, i) => `<circle cx="${xs(i)}" cy="${ys(v)}" r="3.5" fill="var(--cyan)"/>`).join('')}
+    ${labels}
+    <text x="${pad}" y="${pad - 8}" fill="#8b90b3" font-size="11" font-family="JetBrains Mono">${m.k[lang]} · ${(lang==='zh'?'1930→2020':'1930 → 2020')}</text>
+  `;
+}
+renderMetricCards();
+renderTrend();
+
+/* ════════════════════════ MODULE 5 — STRATEGY ════════════════════════ */
+let curStr = 'ubi';
+function renderStrategyList() {
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  document.getElementById('str-list').innerHTML = STRATEGIES.map(s => `
+    <div class="str-item ${s.id === curStr ? 'active' : ''}" data-id="${s.id}">
+      <div class="name">${s.name[lang]}</div>
+      <div class="tag">${s.tag[lang].toUpperCase()}</div>
+    </div>
+  `).join('');
+  document.querySelectorAll('.str-item').forEach(el => el.onclick = () => {
+    curStr = el.dataset.id; renderStrategyList(); renderStrategyDetail(curStr);
+  });
+}
+function renderStrategyDetail(id) {
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  const s = STRATEGIES.find(x => x.id === id);
+  const axisLabels = {
+    short: {en:'Short-term Impact', zh:'短期冲击', c:'#ffd166'},
+    long:  {en:'Long-term Stability', zh:'长期稳定', c:'#56e6ff'},
+    ethics:{en:'Ethical Weight', zh:'伦理重量', c:'#7b5cff'},
+    risk:  {en:'Fragility Risk', zh:'脆弱性风险', c:'#ff6b9d'},
+  };
+  const axesHtml = Object.entries(s.axes).map(([k, v]) => `
+    <div class="str-axis">
+      <div class="k">${axisLabels[k][lang]}</div>
+      <div class="meter"><div style="width:${v}%;background:${axisLabels[k].c};"></div></div>
+      <div class="scale"><span>${lang === 'zh' ? '低' : 'low'}</span><span>${v}</span><span>${lang === 'zh' ? '高' : 'high'}</span></div>
+    </div>
+  `).join('');
+  const tradeoffs = (lang === 'zh' ? s.tradeoffs.zh : s.tradeoffs.en).map(t => `<li>${t}</li>`).join('');
+  document.getElementById('str-detail').innerHTML = `
+    <div class="name">${s.name[lang]}</div>
+    <div class="summary">${s.summary[lang]}</div>
+    <div class="str-axes">${axesHtml}</div>
+    <div class="str-tradeoffs">
+      <h5>${lang === 'zh' ? '你将继承的代价' : 'Tradeoffs you would inherit'}</h5>
+      <ul>${tradeoffs}</ul>
+    </div>
+  `;
+}
+renderStrategyList();
+renderStrategyDetail(curStr);
+
+/* ════════════════════════ MODULE 6 — KNOWLEDGE LAYER ════════════════════════ */
+let curLevel = 'beginner', curTopic = 'Time';
+function renderKnowledge() {
+  const lang = document.body.classList.contains('zh') ? 'zh' : 'en';
+  document.getElementById('kl-tabs').innerHTML = KNOWLEDGE_LEVELS.map(l =>
+    `<button class="kl-tab ${l.id === curLevel ? 'active' : ''}" data-l="${l.id}">${l.name[lang]}</button>`
+  ).join('');
+  document.getElementById('kl-topics').innerHTML = KNOWLEDGE_TOPICS.map((t, i) =>
+    `<button class="kl-topic ${t === curTopic ? 'active' : ''}" data-t="${t}">${lang === 'zh' ? KNOWLEDGE_TOPICS_ZH[i] : t}</button>`
+  ).join('');
+  document.querySelectorAll('.kl-tab').forEach(b => b.onclick = () => { curLevel = b.dataset.l; renderKnowledge(); });
+  document.querySelectorAll('.kl-topic').forEach(b => b.onclick = () => { curTopic = b.dataset.t; renderKnowledge(); });
+  const idx = KNOWLEDGE_TOPICS.indexOf(curTopic);
+  const topicLabel = lang === 'zh' ? KNOWLEDGE_TOPICS_ZH[idx] : curTopic;
+  document.getElementById('kl-card').innerHTML = `
+    <div class="topic">${(lang === 'zh' ? '主题 · ' : 'TOPIC · ') + topicLabel.toUpperCase()}</div>
+    <h3>${KNOWLEDGE_LEVELS.find(l => l.id === curLevel).name[lang]}</h3>
+    <div class="body">${KNOWLEDGE[curTopic][curLevel][lang]}</div>
+  `;
+}
+renderKnowledge();
+
+/* ════════════════════════ FADE-UP ANIMATIONS ════════════════════════ */
+const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('in')), { threshold: .12 });
+document.querySelectorAll('.section-head, .timeline-stage, .cs-stage, .sim-stage, .met-grid, .met-trend, .str-stage, .kl-stage').forEach(el => {
+  el.classList.add('fadeup'); io.observe(el);
+});
+</script>
+</body>
+</html>
